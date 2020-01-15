@@ -1,0 +1,25 @@
+
+
+Procedimiento del software
+
+1-Ingresar Empleados:Permiso solo el administrador;
+
+2-Ingreso del cliente:{
+    Acceso al empleado,
+    Automatizar reserva:{
+        Al ingresar un nuevo cliente,
+        Reserva de un cliente existente
+    },
+    Ingreso de habitación(habitación_reserva),
+    Ingreso de huespedes
+  };
+
+3-Ingreso de servicios:se carga a cargos_servicios,
+
+4-Facturación:Al día final se factura;
+
+5-Creación de reportes:
+
+817,644
+
+817; 578

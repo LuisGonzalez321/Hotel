@@ -176,7 +176,7 @@ namespace SistemaHotel.Modelo {
                 if (DtResultado.Rows.Count > 0)
                 {
                     dr = DtResultado.Rows[0];
-                    return Convert.ToInt32(dr["id_Empleado"].ToString());
+                    return Convert.ToInt32(dr["IdEmpleado"].ToString());
                 }
                 return 0;
             }

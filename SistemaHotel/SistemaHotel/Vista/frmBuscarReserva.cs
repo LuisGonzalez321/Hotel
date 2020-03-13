@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace SistemaHotel.Vista
 {
-    public partial class frmBuscarReserva : Form
+    public partial class FrmBuscarReserva : Form
     {
         private int tipo_fecha_buscar = 0;
 
-        public frmBuscarReserva()
+        public FrmBuscarReserva()
         {
             InitializeComponent();
             this.dateTimePicker2.Enabled = false;
@@ -98,7 +98,7 @@ namespace SistemaHotel.Vista
                     int c = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[0].Value);
                     //new frmHuesped(c).Show();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Error");
                 }

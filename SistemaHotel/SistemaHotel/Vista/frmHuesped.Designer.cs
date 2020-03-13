@@ -1,5 +1,5 @@
 ﻿namespace SistemaHotel.Vista {
-    partial class frmHuesped {
+    partial class FrmHuesped {
         /// <summary> 
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -23,9 +23,9 @@
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHuesped));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHuesped));
             this.tabla_huesped = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.txt_Buscar = new Bunifu.Framework.UI.BunifuTextbox();
@@ -46,19 +46,19 @@
             // 
             // tabla_huesped
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_huesped.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabla_huesped.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tabla_huesped.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.tabla_huesped.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tabla_huesped.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_huesped.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_huesped.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tabla_huesped.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabla_huesped.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabla_huesped.DoubleBuffered = true;
@@ -89,13 +89,13 @@
             this.txt_Buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_Buscar.BackgroundImage")));
             this.txt_Buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txt_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
+            this.txt_Buscar.ForeColor = System.Drawing.Color.Silver;
             this.txt_Buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_Buscar.Icon")));
             this.txt_Buscar.Location = new System.Drawing.Point(21, 22);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(241, 42);
             this.txt_Buscar.TabIndex = 31;
-            this.txt_Buscar.text = "Busque un Cliente";
+            this.txt_Buscar.text = "Buscar Huésped";
             // 
             // btn_Cancelar
             // 
@@ -395,7 +395,7 @@
             this.txt_nacionalidad.Text = "Nacionalidad";
             this.txt_nacionalidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // frmHuesped
+            // FrmHuesped
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -416,7 +416,7 @@
             this.Controls.Add(this.txt_PrimerApellido);
             this.Controls.Add(this.txt_PrimerNombre);
             this.Controls.Add(this.tabla_huesped);
-            this.Name = "frmHuesped";
+            this.Name = "FrmHuesped";
             this.Size = new System.Drawing.Size(817, 578);
             this.Load += new System.EventHandler(this.frmHuesped_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabla_huesped)).EndInit();

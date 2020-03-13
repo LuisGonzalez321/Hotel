@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace SistemaHotel.Vista
 {
-    public partial class frmReserva : Form
+    public partial class FrmReserva : Form
     {
         public int id_empleado;
         public int no_habitación;
@@ -20,7 +20,7 @@ namespace SistemaHotel.Vista
         public DateTime fechaEntrada;
         public DateTime fechaSalida;
 
-        public frmReserva(int id_cliente, int id_empleado,int no_habitación, DateTime fechaEntrada,DateTime fechaSalida){
+        public FrmReserva(int id_cliente, int id_empleado,int no_habitación, DateTime fechaEntrada,DateTime fechaSalida){
             InitializeComponent();
             this.id_cliente = id_cliente;
             this.id_empleado = id_empleado;
@@ -30,8 +30,7 @@ namespace SistemaHotel.Vista
            // MessageBox.Show("-" + fechaEntrada+"-"+fechaSalida+"-"+id_cliente+"-"+id_empleado+"-"+no_habitación);
         }
 
-
-        public frmReserva(){
+        public FrmReserva(){
             InitializeComponent();
         }
 
@@ -39,7 +38,7 @@ namespace SistemaHotel.Vista
         {
             data_cliente.DataSource = NCliente.Mostrar();
             data_reserva.DataSource = NReserva.MostrarReservas();
-            this.lista_huesped.DataSource = getData();
+           // this.lista_huesped.DataSource = getData();
         }
 
         public void Activar(){
@@ -72,7 +71,7 @@ namespace SistemaHotel.Vista
 
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
-            FormMenu menu = new FormMenu(id_empleado);
+            FrmMenu menu = new FrmMenu(id_empleado);
             menu.tab.Visible = true;
             this.Hide();
         }
@@ -84,11 +83,9 @@ namespace SistemaHotel.Vista
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
-            FORMHuesped huesped = new FORMHuesped();
+            FrmHuesped huesped = new FrmHuesped();
             huesped.Show();
-           this.lista_huesped.Items.AddRange(new object[] { "1" });
-
-
+            this.lista_huesped.Items.AddRange(new object[] { "1" });
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -98,7 +95,7 @@ namespace SistemaHotel.Vista
 
         private void btn_mostrar_Click(object sender, EventArgs e)
         {
-            FORMHuesped fm = new FORMHuesped();
+            FrmHuesped fm = new FrmHuesped();
             fm.Show();
         }
 
@@ -114,7 +111,6 @@ namespace SistemaHotel.Vista
             {
                 using (SqlDataAdapter adapter = new SqlDataAdapter("Mostrar_Huesped_Reservado", con))
                 {
-
                     con.Open();
                     adapter.Fill(dtclientes);   
                 }

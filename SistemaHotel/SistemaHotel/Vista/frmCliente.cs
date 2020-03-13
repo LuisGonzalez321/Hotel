@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using SistemaHotel.Controlador;
 
 namespace SistemaHotel.Vista {
-    public partial class frmCliente : UserControl {
+    public partial class FrmCliente : UserControl {
 
         private int Id;
         public int id_empleado;
@@ -18,11 +18,12 @@ namespace SistemaHotel.Vista {
         public DateTime FechaEntrada;
         public DateTime FechaSalida;
 
-        public frmCliente(){
+        public FrmCliente()
+        {
             InitializeComponent();
         }
 
-        public frmCliente(int id_empleado,int no_habitación,DateTime FechaEntrada,DateTime FechaSalida) {
+        public FrmCliente(int id_empleado,int no_habitación,DateTime FechaEntrada,DateTime FechaSalida) {
             InitializeComponent();
             this.id_empleado = id_empleado;
             this.no_habitación = no_habitación;
@@ -86,7 +87,7 @@ namespace SistemaHotel.Vista {
                validar(txt_Teléfono, "Teléfono")){
                 MessageBox.Show("Verifique bien los campos");
             } else if (Controlador.NCliente.Insertar(txt_PrimerNombre.Text, txt_SegundoNombre.Text, txt_PrimerApellido.Text, txt_SegundoApellido.Text, txt_Dirección.Text, txt_Teléfono.Text, txt_Correo.Text)){
-                frmReserva frmreserva = new frmReserva(NCliente.get_idCliente(), id_empleado, no_habitación, FechaEntrada, FechaSalida);
+                FrmReserva frmreserva = new FrmReserva(NCliente.get_idCliente(), id_empleado, no_habitación, FechaEntrada, FechaSalida);
                 MessageBox.Show("Guardado exitosamente");
                 frmreserva.Show();
                 this.limpiar();

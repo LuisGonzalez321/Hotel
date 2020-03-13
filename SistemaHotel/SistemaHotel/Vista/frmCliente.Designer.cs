@@ -1,5 +1,5 @@
 ﻿namespace SistemaHotel.Vista {
-    partial class frmCliente {
+    partial class FrmCliente {
         /// <summary> 
         /// Variable del diseñador necesaria.
         /// </summary>
@@ -25,7 +25,7 @@
         private void InitializeComponent() {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.tabla_cliente = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txt_PrimerNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_PrimerApellido = new Bunifu.Framework.UI.BunifuMaterialTextbox();

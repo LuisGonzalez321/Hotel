@@ -99,14 +99,10 @@ C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debu
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\SistemaHotel.application
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\SistemaHotel.exe
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\SistemaHotel.pdb
-C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.Core.dll
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.csprojResolveAssemblyReference.cache
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Properties.Resources.resources
-C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.Cuentas.resources
-C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.FORMHuesped.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmBuscarReserva.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmReserva.resources
-C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.FormMenu.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmEmpleado.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmHuesped.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmCliente.resources
@@ -115,3 +111,5 @@ C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debu
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.csproj.GenerateResource.Cache
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.exe.manifest
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.application
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.FrmMenu.resources

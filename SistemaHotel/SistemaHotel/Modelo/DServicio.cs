@@ -13,14 +13,14 @@ namespace SistemaHotel.Modelo
     {
         public DataTable getServicios()
         {
-            DataTable DtResultado = new DataTable("Servicios");
+            DataTable DtResultado = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexión.Cn;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "LISTAR_SERVICIOS";
+                SqlCmd.CommandText = "ListaServicio";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
@@ -35,7 +35,7 @@ namespace SistemaHotel.Modelo
 
         public DataTable getListaHRServicio()
         {
-            DataTable DtResultado = new DataTable("Habitación Reserva");
+            DataTable DtResultado = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
             try
             {

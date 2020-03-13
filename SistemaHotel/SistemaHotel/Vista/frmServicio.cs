@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace SistemaHotel.Vista
 {
-    public partial class frmServicio : Form
+    public partial class FrmServicio : Form
     {
         private int idhr;
 
 
-        public frmServicio()
+        public FrmServicio()
         {
             InitializeComponent();
             cargarCombo();
@@ -38,11 +38,18 @@ namespace SistemaHotel.Vista
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ids = this.comboBox1.SelectedIndex;
-            double precio = Convert.ToDouble(this.textBox1.Text);
+            if (this.textBox1.Text.Length > 0)
+            {
+                int ids = this.comboBox1.SelectedIndex;
+                double precio = Convert.ToDouble(this.textBox1.Text);
 
-            NServicio.setCargoServicio(ids, idhr, precio);
-            this.Hide();
+                NServicio.setCargoServicio(ids, idhr, precio);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Revise los datos de entrada","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -56,15 +63,32 @@ namespace SistemaHotel.Vista
             {
                 try
                 {
-                    idhr = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[0].Value);
-                    
+                    idhr = Convert.ToInt32(this.dataGridView1.SelectedRows[0].Cells[0].Value);         
                 }
                 catch (Exception ex)
                 {
-
+                    MessageBox.Show(ex.Message);
                 }
 
             }
+        }
+
+        private void textBox1_KeyPress (object sender, KeyPressEventArgs e)
+        {
+            Tools.soloNumsDecimal(e);
+        }
+
+        private void btn_cancelar_Click (object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cancelar?", "Cancelar",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+            }
+        }
+
+        private void btn_salir_Click (object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

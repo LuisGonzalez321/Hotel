@@ -1,6 +1,6 @@
 ﻿namespace SistemaHotel.Vista
 {
-    partial class frmBuscarReserva
+    partial class FrmBuscarReserva
     {
         /// <summary>
         /// Required designer variable.

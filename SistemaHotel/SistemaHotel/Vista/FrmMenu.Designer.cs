@@ -1,6 +1,6 @@
 ﻿
 namespace SistemaHotel.Vista {
-    partial class FormMenu {
+    partial class FrmMenu {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -24,7 +24,7 @@ namespace SistemaHotel.Vista {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -611,7 +611,7 @@ namespace SistemaHotel.Vista {
             this.combox_idHab.Name = "combox_idHab";
             this.combox_idHab.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.combox_idHab.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(40)))), ((int)(((byte)(140)))));
-            this.combox_idHab.selectedIndex = 0;
+            this.combox_idHab.selectedIndex = 1;
             this.combox_idHab.Size = new System.Drawing.Size(217, 35);
             this.combox_idHab.TabIndex = 6;
             // 
@@ -716,7 +716,7 @@ namespace SistemaHotel.Vista {
             this.combox_hab.Name = "combox_hab";
             this.combox_hab.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.combox_hab.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(40)))), ((int)(((byte)(140)))));
-            this.combox_hab.selectedIndex = 0;
+            this.combox_hab.selectedIndex = 1;
             this.combox_hab.Size = new System.Drawing.Size(217, 35);
             this.combox_hab.TabIndex = 0;
             this.combox_hab.onItemSelected += new System.EventHandler(this.combox_hab_onItemSelected);

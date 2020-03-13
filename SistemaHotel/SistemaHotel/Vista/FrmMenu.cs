@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaHotel.Vista {
-    public partial class FormMenu : Form {
+    public partial class FrmMenu : Form {
 
         public int id_empleado;
         public DateTime FechEntrada;
         public DateTime FechaSalida;
 
 
-        public FormMenu(int id_empleado) {
+        public FrmMenu(int id_empleado) {
             InitializeComponent();
             this.tab.Hide();
             this.SetStyle(ControlStyles.ResizeRedraw,true);
@@ -25,7 +25,7 @@ namespace SistemaHotel.Vista {
         }
 
         private void FormMenu_Load(object sender, EventArgs e){
-             this.tabla_habitación.DataSource = Controlador.NHabitación.Mostrar();
+            this.tabla_habitación.DataSource = Controlador.NHabitación.Mostrar();
             if (id_empleado>0){
                 btn_empleado.Visible = false;
             }
@@ -77,7 +77,7 @@ namespace SistemaHotel.Vista {
 
         private void btn_reserar_Click(object sender, EventArgs e)
         {
-            frmCliente frmcliente = new frmCliente(Convert.ToInt32(combox_idHab.selectedValue), id_empleado, this.date_fechaEntrada.Value, this.date_FechaSalida.Value);
+            FrmCliente frmcliente = new FrmCliente(Convert.ToInt32(combox_idHab.selectedValue), id_empleado, this.date_fechaEntrada.Value, this.date_FechaSalida.Value);
             int width = tab.Size.Width;
             int height = tab.Size.Height;
             int x = 201; 
@@ -93,7 +93,7 @@ namespace SistemaHotel.Vista {
             this.InitializeComponent();
             this.tab.Hide();
 
-            frmCliente usercontrol = new frmCliente();
+            FrmCliente usercontrol = new FrmCliente();
             int width = tab.Size.Width;
             int height = tab.Size.Height;
             int x = 201;
@@ -104,7 +104,7 @@ namespace SistemaHotel.Vista {
         }
 
         private void btn_reservas_Click(object sender, EventArgs e){
-            frmReserva frmreserva = new frmReserva();
+            FrmReserva frmreserva = new FrmReserva();
             frmreserva.Show();
         }
 
@@ -162,7 +162,7 @@ namespace SistemaHotel.Vista {
             this.InitializeComponent();
             this.tab.Hide();
 
-            frmHuesped usercontrol = new frmHuesped();
+            FrmHuesped usercontrol = new FrmHuesped();
             int width = tab.Size.Width;
             int height = tab.Size.Height;
             int x = 201;
@@ -174,8 +174,8 @@ namespace SistemaHotel.Vista {
 
         private void btn_servicio_Click(object sender, EventArgs e)
         {
-           frmServicio servicio= new frmServicio();
-            servicio.Show();
+           FrmServicio servicio= new FrmServicio();
+           servicio.Show();
         }
     }
 }

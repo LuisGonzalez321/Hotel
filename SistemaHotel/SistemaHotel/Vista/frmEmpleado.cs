@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace SistemaHotel.Vista
 {
-    public partial class frmEmpleado : Form
+    public partial class FrmEmpleado : Form
     {
         private int Id;
 
-        public frmEmpleado()
+        public FrmEmpleado()
         {
             InitializeComponent();
         }
@@ -358,5 +358,9 @@ namespace SistemaHotel.Vista
 
         }
 
+        private void btn_guardar_Click_1 (object sender, EventArgs e)
+        {
+
+        }
     }
 }

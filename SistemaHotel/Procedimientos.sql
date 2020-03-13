@@ -7,14 +7,16 @@ create table Usuario
   login varchar(50),
   password varchar(50),
   rol varchar(50),
-  idEmplado int foreign key references Empleado(id_empleado)
+  IdEmpleado int foreign key references Empleado(Id_empleado)
 )
+GO
+
 
 Create procedure [dbo].[Buscar_Empleado]
 	 @dato varchar(20)
 	 as
 	 Select
- id_empleado as Id_Empleado,
+ c.Id_empleado as Id_Empleado,
  c.p_nom as [Primer Nombre],
  c.s_nom as [Segundo Nombre],
  c.p_apell as [Primer Apellido],
@@ -22,7 +24,7 @@ Create procedure [dbo].[Buscar_Empleado]
  direccion as Dirección,
  correo as Correo,
  tel as Teléfono
- from empleado c
+ from Empleado c
  where c.p_nom like @dato + '%' 
  or  c.s_nom like @dato + '%' 
  or  c.p_apell like @dato + '%' 
@@ -79,7 +81,7 @@ Create table #TFecha
 while(@Contador <= ((Select count(*) from #TFecha)) )
 begin
 set @Fecha = (Select Fecha from #TFecha where IdTFecha = @Contador)
-if not exists(Select * from habitacion_reserva hr
+if not exists(Select * from Habitacion_Reserva hr
               where @Fecha >= hr.fecha_entrada and @Fecha < hr.fecha_salida
 			  and hr.no_habitacion = @IdHabitación
 			   )
@@ -132,7 +134,7 @@ Create procedure [dbo].[Editar_Cliente]
 	 tel = @telefono,
 	 correo = @correo,
 	 estado= @Estado
-	 where id_cliente = @idcliente
+	 where Id_cliente = @idcliente
 go
 
 ------------------------------------
@@ -147,7 +149,7 @@ Create procedure [dbo].[Editar_Empleado]
 	 @correo varchar(40),
 	 @telefono varchar(20)
 as
-	 update empleado set 
+	 update Empleado set 
 	 p_nom =  @primernombre,
 	 s_nom = @segundonombre,
 	 p_apell = @primerapellido,
@@ -155,7 +157,7 @@ as
 	 direccion = @direccion,
 	 correo = @correo,
 	 tel = @telefono
-	 where id_empleado = @idempleado
+	 where Id_empleado = @idempleado
 go
 --------------------------------------
 
@@ -165,14 +167,14 @@ Select
    h.no_habitacion,
    th.nom_tipo, 
    dbo.Determina_Estado(h.no_habitacion,@fechaentrada, @fechasalida) as Estado 
-   from habitacion h inner join tipo_habitacion th on th.cod_tipo=h.cod_tipo
+   from Habitacion h inner join tipo_habitacion th on th.cod_tipo=h.cod_tipo
 go
 ---------------------------------------------
 
 
 Create procedure [dbo].[get_idCliente]
 as
-select top(1) id_cliente from cliente order by id_cliente desc
+select top(1) Id_cliente from cliente order by id_cliente desc
 go
 
 --------------------------------------------------
@@ -254,7 +256,7 @@ Insert into habitacion_reserva values (@no_habitación,@id_reserva,@fecha_entrada
 
 go
 -------------------------
-ALter procedure Insertar_Huesped
+Create procedure Insertar_Huesped
 @PrimerNombre varchar(50),
 @SegundoNombre varchar(50),
 @PrimerApellido varchar(50),
@@ -305,7 +307,7 @@ go
 Create procedure [dbo].[Mostrar_Clientes]
 as
 Select
- id_cliente as Id_Cliente,
+ c.Id_cliente as Id_Cliente,
  c.p_nom as [Primer Nombre],
  c.s_nom as [Segundo Nombre],
  c.p_apell as [Primer Apellido],
@@ -368,7 +370,7 @@ select * from huesped
 go
 --------------------------------------------------
 
-ALter procedure Mostrar_Huesped_Reservado
+Create procedure Mostrar_Huesped_Reservado
 @IdReserva int
   as
 select 
@@ -393,9 +395,9 @@ Create procedure [dbo].[Rol_Usuario]
 @login varchar(50),
 @password varchar(100)
    as
-if exists(select login,cast(DECRYPTBYPASSPHRASE(@password,password) as varchar(50)) from Usuario where cast(DECRYPTBYPASSPHRASE(@password,password) as varchar(50))=@password and login=@login)
+if exists(select login,password from Usuario where password=@password and login=@login)
    begin 
-	 select rol from Usuario where cast(DECRYPTBYPASSPHRASE(@password,password) as varchar(50))=@password and login=@login
+	 select rol from Usuario where password=@password and login=@login
    end
 else
    begin
@@ -405,12 +407,20 @@ go
 
 ---------------------------------------------------------
 
+
 Create procedure [dbo].[Validar_Acceso]
 @login nvarchar(50),
 @password nvarchar(100)
    as
-select id_Empleado from Usuario where cast(DECRYPTBYPASSPHRASE(@password,password) as varchar(50))=@password and login=@login
+select IdEmplado from Usuario where password=@password and login=@login
 go
+
+--Create procedure [dbo].[Validar_Acceso]
+--@login nvarchar(50),
+--@password nvarchar(100)
+--   as
+--select IdEmplado from Usuario where cast(DECRYPTBYPASSPHRASE(@password,password) as varchar(50))=@password and login=@login
+--go
 
 CREATE PROCEDURE CONSULTAR_LISTA_HR_SERVICIO
 AS
@@ -421,6 +431,7 @@ ON R.id_reserva = HR.id_reserva
 INNER JOIN cliente C
 ON C.id_cliente = R.id_cliente
 GROUP BY HR.id_hab_reserva,p_nom+SPACE(1)+C.p_apell,HR.no_habitacion,HR.fecha_entrada,HR.fecha_salida
+go
 ---------------------------------
 
 EXEC CONSULTAR_LISTA_HR_SERVICIO
@@ -443,4 +454,24 @@ AS
 INSERT INTO cargos_servicios VALUES(@IDS,@IDHR,@PRECIO)
 
 select * from cargos_servicios
+go
 
+create procedure ListaServicio
+as
+select descr from servicio
+go
+
+execute dbo.Mostrar_Huesped_Reservado 2
+
+select * from cargos_servicios
+select * from cliente
+select * from empleado
+select * from habitacion
+select * from habitacion_reserva
+
+select * from Empleado
+select * from Usuario
+
+insert into Usuario values('Luis','1234','Admin',1)
+
+update Usuario set rol = 'Administrador' where IdUsuario = 1

@@ -24,13 +24,13 @@ namespace SistemaHotel.Vista {
 
             if ((Rol == "Administrador") && (NUsuario.Validar_acceso(login, password) != null))
             {
-                FormMenu fc = new FormMenu(0);
+                FrmMenu fc = new FrmMenu(0);
                 fc.Show();
                 this.Hide();
             }
             else if (Rol == "Empleado" && (NUsuario.Validar_acceso(login, password) != null))
             {
-                FormMenu fc = new FormMenu(NUsuario.Mostrar(login, password));
+                FrmMenu fc = new FrmMenu(NUsuario.Mostrar(login, password));
                 fc.id_empleado = NUsuario.Mostrar(login, password);
                 fc.btn_empleado.Visible = false;
                 fc.Show();

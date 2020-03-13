@@ -11,8 +11,8 @@ using SistemaHotel.Controlador;
 using SistemaHotel.Modelo;
 
 namespace SistemaHotel.Vista {
-    public partial class frmHuesped : UserControl {
-        public frmHuesped() {
+    public partial class FrmHuesped : UserControl {
+        public FrmHuesped() {
 
             InitializeComponent();
         }

@@ -17,45 +17,22 @@ namespace SistemaHotel.Modelo {
 
         public int IdEmpleado
         {
-            get {
-                return idEmpleado;
-            }
-            set {
-                idEmpleado = value;
-            }
+            get;set;
         }
 
         public string Usuario
         {
-            get {
-                return usuario;
-            }
-
-            set {
-                usuario = value;
-            }
+            get;set;
         }
 
         public string Contraseña
         {
-            get {
-                return contraseña;
-            }
-
-            set {
-                contraseña = value;
-            }
+            get;set;
         }
 
         public string Rol
         {
-            get {
-                return rol;
-            }
-
-            set {
-                rol = value;
-            }
+            get;set;
         }
 
         public DUsuario(){}
@@ -70,26 +47,10 @@ namespace SistemaHotel.Modelo {
         public DataTable Validar_acceso(string usuario, string contraseña) {
             DataTable DtResultado = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
-            try {
+            try
+            {
                 SqlCon.ConnectionString = Conexión.Cn;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Validar_Acceso";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlParameter ParDato = new SqlParameter();
-                ParDato.ParameterName = "@login";
-                ParDato.SqlDbType = SqlDbType.VarChar;
-                ParDato.Size = 60;
-                ParDato.Value = usuario;
-                SqlCmd.Parameters.Add(ParDato);
-
-                SqlParameter ParDato1 = new SqlParameter();
-                ParDato1.ParameterName = "@password";
-                ParDato1.SqlDbType = SqlDbType.VarChar;
-                ParDato1.Size = 100;
-                ParDato1.Value = contraseña;
-                SqlCmd.Parameters.Add(ParDato1);
+                SqlCommand SqlCmd = new SqlCommand("Validar_Acceso '"+usuario + "', '"+contraseña+"'", SqlCon);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
@@ -98,11 +59,16 @@ namespace SistemaHotel.Modelo {
                 MessageBox.Show(ex.ToString());
                 DtResultado = null;
             }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
             return DtResultado;
 
         }
 
-        public string Rol_Usuario(string login,string password)
+        public string Rol_Usuario (string usuario, string contraseña)
         {
 
             DataTable DtResultado = new DataTable("Usuario");
@@ -110,24 +76,7 @@ namespace SistemaHotel.Modelo {
             DataRow dr;
             try {
                 SqlCon.ConnectionString = Conexión.Cn;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Rol_Usuario";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlParameter ParDato = new SqlParameter();
-                ParDato.ParameterName = "@login";
-                ParDato.SqlDbType = SqlDbType.VarChar;
-                ParDato.Size = 60;
-                ParDato.Value = login;
-                SqlCmd.Parameters.Add(ParDato);
-
-                SqlParameter ParDato1 = new SqlParameter();
-                ParDato1.ParameterName = "@password";
-                ParDato1.SqlDbType = SqlDbType.VarChar;
-                ParDato1.Size = 100;
-                ParDato1.Value = password;
-                SqlCmd.Parameters.Add(ParDato1);
+                SqlCommand SqlCmd = new SqlCommand("Rol_Usuario '"+usuario+"','"+contraseña+"'", SqlCon);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
@@ -140,9 +89,14 @@ namespace SistemaHotel.Modelo {
                 MessageBox.Show(ex.ToString());
                 return null;
             }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
         }
 
-        public int get_idEmpleado(string login, string password)
+        public int get_idEmpleado(string usuario, string contraseña)
         {
 
             DataTable DtResultado = new DataTable("Usuario");
@@ -151,24 +105,7 @@ namespace SistemaHotel.Modelo {
             try
             {
                 SqlCon.ConnectionString = Conexión.Cn;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Validar_Acceso";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlParameter ParDato = new SqlParameter();
-                ParDato.ParameterName = "@login";
-                ParDato.SqlDbType = SqlDbType.VarChar;
-                ParDato.Size = 60;
-                ParDato.Value = login;
-                SqlCmd.Parameters.Add(ParDato);
-
-                SqlParameter ParDato1 = new SqlParameter();
-                ParDato1.ParameterName = "@password";
-                ParDato1.SqlDbType = SqlDbType.VarChar;
-                ParDato1.Size = 100;
-                ParDato1.Value = password;
-                SqlCmd.Parameters.Add(ParDato1);
+                SqlCommand SqlCmd = new SqlCommand("Validar_Acceso '" + usuario + "', '" + contraseña + "'", SqlCon);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);

@@ -113,3 +113,4 @@ C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debu
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.application
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu_UI_v1.52.dll
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.FrmMenu.resources
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.FrmHabitación.resources

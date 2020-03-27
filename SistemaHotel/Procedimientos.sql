@@ -65,7 +65,7 @@ Create table #TFecha
  Fecha date,
  Estado varchar(60))
 
-  Declare @Contador int, @Fecha date, @Días int
+ Declare @Contador int, @Fecha date, @Días int
  Set @Contador = 1
  set @Fecha = @Fechaentrada
  Set @Días = datediff(day,@Fechaentrada, @Fechasalida)
@@ -73,7 +73,7 @@ Create table #TFecha
  begin
  insert into #TFecha (Fecha) values (@Fecha)
  set @Fecha = dateadd(day,1, @Fecha )
- Set @Contador = @Contador +1 
+ Set @Contador = @Contador + 1 
  end
 
  Set @Contador = 1
@@ -195,8 +195,6 @@ if(@estado='HABILITADO')
   update cliente set estado='DESHABILITADO' where id_cliente=@idCliente
 else
    update cliente set estado='HABILITADO' where id_cliente=@idCliente
-select * from cliente
-
 go
 -----------------------------------------------
 
@@ -210,18 +208,16 @@ go
 
 ---------------------------------------------------------------
 
- Create procedure [dbo].[Insertar_Cliente]
+ create procedure [dbo].[Insertar_Cliente]
  @primernombre varchar(15),
  @segundonombre varchar(15),
  @primerapellido varchar(15),
  @segundoapellido varchar(15),
- @direccion varchar(90),
- @correo varchar(40),
- @telefono varchar(20)
+ @direccion varchar(70),
+ @telefono varchar(10),
+ @correo varchar(25)
 	as
  insert into Cliente values (@primernombre,@segundonombre,@primerapellido, @segundoapellido,@direccion, @telefono, @correo,'HABILITADO')
- Select * from Cliente
-
  go
 
  ----------------------------------------------------------
@@ -298,8 +294,6 @@ Create procedure [dbo].[Insertar_Usuario]
 @rol varchar(50)
  as
 insert into Usuario values(@login,EncryptbyPassPhrase(@password,@password),@rol)
-
-
 go
 
 ------------------------------------------------------------
@@ -317,17 +311,16 @@ Select
  tel as Teléfono,
  estado as Estado
  from Cliente c
-
  go
 
  ------------------------------------------------------------
 
+ select * from Cliente
 
 
 Create procedure [dbo].[Mostrar_Empleado]
 as
 select * from empleado
-
 go 
 
 ------------------------------------------------------------
@@ -339,17 +332,19 @@ Create procedure [dbo].[Mostrar_Habitación]
 select 
   h.no_habitacion,
   th.cod_tipo,
-  h.descr,h.cap,h.stat,th.nom_tipo,
+  h.descr,
+  h.cap,
+  h.stat
+  th.nom_tipo,
   th.precio 
   from habitacion h
   inner join tipo_habitacion th on th.cod_tipo=h.cod_tipo
   where th.cod_tipo=@IdTipoHabitación
-
-  go
+ go
 
   ----------------------------------------------------------
 
-  Create procedure [dbo].[Mostrar_Habitaciones]
+Create procedure [dbo].[Mostrar_Habitaciones]
 as
 select 
   h.no_habitacion,
@@ -363,14 +358,14 @@ select
 
   ----------------------------------------------------------
 
-  Create procedure [dbo].[Mostrar_Huespedes]
+Create procedure [dbo].[Mostrar_Huespedes]
   as
 select * from huesped
 
 go
 --------------------------------------------------
 
-Create procedure Mostrar_Huesped_Reservado
+Create procedure Mostrar_Huesped_Reservado 1
 @IdReserva int
   as
 select 
@@ -380,7 +375,7 @@ select
    h.s_apell as Nombre
    from huesped h 
    inner join huesped_hab_reserva hhr on hhr.id_huesped=h.id_huesped
-   inner join habitacion_reserva hr on hr.id_reserva=@IdReserva
+   inner join habitacion_reserva hr on hr.id_reserva = @IdReserva
 go
 ------------------------------------------------------
 
@@ -405,7 +400,7 @@ Create procedure [dbo].[Validar_Acceso]
 @login nvarchar(50),
 @password nvarchar(100)
    as
-select IdEmplado from Usuario where password=@password and login=@login
+select IdEmpleado from Usuario where password=@password and login=@login
 go
 
 --Create procedure [dbo].[Validar_Acceso]
@@ -487,4 +482,4 @@ select
 	stat from Reserva
 go
 
-MostrarReservas
+dbo.Mostrar_Empleado

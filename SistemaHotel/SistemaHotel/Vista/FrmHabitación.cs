@@ -78,10 +78,9 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void btn_reserar_Click (object sender, EventArgs e)
+        private void btn_reservar_Click (object sender, EventArgs e)
         {
             FrmCliente frmcliente = new FrmCliente(Convert.ToInt32(combox_idHab.selectedValue), id_empleado, this.date_fechaEntrada.Value, this.date_FechaSalida.Value);
-            this.Controls.Add(frmcliente);
         }
     }
 }

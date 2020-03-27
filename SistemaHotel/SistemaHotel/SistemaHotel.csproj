@@ -123,29 +123,23 @@
     <Compile Include="Vista\FrmBuscarReserva.Designer.cs">
       <DependentUpon>FrmBuscarReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmEmpleado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmEmpleado.Designer.cs">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmHabitación.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vista\FrmHabitación.Designer.cs">
       <DependentUpon>FrmHabitación.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\FrmReserva.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FrmReserva.Designer.cs">
-      <DependentUpon>FrmReserva.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\FrmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\FrmEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\FrmEmpleado.Designer.cs">
-      <DependentUpon>FrmEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmHuesped.cs">
       <SubType>UserControl</SubType>
@@ -158,6 +152,12 @@
     </Compile>
     <Compile Include="Vista\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FrmReserva.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmReserva.Designer.cs">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FrmServicio.cs">
       <SubType>Form</SubType>
@@ -179,23 +179,23 @@
     <EmbeddedResource Include="Vista\FrmBuscarReserva.resx">
       <DependentUpon>FrmBuscarReserva.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmEmpleado.resx">
+      <DependentUpon>FrmEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmHabitación.resx">
       <DependentUpon>FrmHabitación.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FrmReserva.resx">
-      <DependentUpon>FrmReserva.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\FrmEmpleado.resx">
-      <DependentUpon>FrmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmHuesped.resx">
       <DependentUpon>FrmHuesped.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmReserva.resx">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmServicio.resx">
       <DependentUpon>FrmServicio.cs</DependentUpon>

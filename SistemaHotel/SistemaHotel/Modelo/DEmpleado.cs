@@ -9,7 +9,8 @@ using System.Windows.Forms;
 
 namespace SistemaHotel.Modelo
 {
-    class DEmpleado{
+    class DEmpleado
+    {
 
         private int id_empleado;
         private String p_nombre;
@@ -23,52 +24,46 @@ namespace SistemaHotel.Modelo
 
 
 
-        public string P_nombre{
-            get {return p_nombre;}
-            set{ p_nombre = value; }
+        public string P_nombre
+        {
+            get;set;
         }
-        public string S_nombre{
-            get { return s_nombre;}
-            set { s_nombre = value;}
+        public string S_nombre
+        {
+            get;set;
         }
-        public string P_apellido{
-            get{return p_apellido;}
-            set{p_apellido = value;}
+        public string P_apellido
+        {
+            get;set;
         }
-        public string S_apellido{
-            get { return s_apellido; }
-            set{s_apellido = value;}
+        public string S_apellido
+        {
+            get;set;
         }
-        public string Direccion{
-            get { return direccion; }
-            set { direccion = value; }
+        public string Direccion
+        {
+            get;set;
         }
-        public string Telefono{
-            get{ return telefono; }
-            set{telefono = value;}
+        public string Telefono
+        {
+            get;set;
         }
         public string Correo{
-            get{return correo;}
-            set{correo = value;}
+            get;set;
         }
 
-        public string Estado{
-            get{return estado;}
-            set{estado = value;}
+        public string Estado
+        {
+            get;set;
         }
 
         public int Id_empleado
         {
-            get {
-                return id_empleado;
-            }
-
-            set {
-                id_empleado = value;
-            }
+            get;set;
         }
 
-        public DEmpleado(int id_empleado, string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string correo, string estado){
+        public DEmpleado(int id_empleado, string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string correo, string estado)
+        {
             this.id_empleado = id_empleado;
             this.P_nombre = p_nombre;
             this.S_nombre = s_nombre;
@@ -84,26 +79,26 @@ namespace SistemaHotel.Modelo
 
         public System.Data.DataTable Mostrar_empleados()
         {
-            DataTable DtResultado = new DataTable("empleado");
+            DataTable DtResultado = new DataTable();
             System.Data.SqlClient.SqlConnection SqlCon = new System.Data.SqlClient.SqlConnection();
             try
             {
                 SqlCon.ConnectionString = Conexión.Cn;
                 SqlCon.Open();
 
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Empleado";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(DtResultado);
-
+                new SqlDataAdapter(new SqlCommand("Mostrar_Empleado", SqlCon)).Fill(DtResultado);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
                 DtResultado = null;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                {
+                    SqlCon.Close();
+                }
             }
             return DtResultado;
         }

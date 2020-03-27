@@ -30,13 +30,16 @@ namespace SistemaHotel.Vista {
             }
             else if (Rol == "Empleado" && (NUsuario.Validar_acceso(login, password) != null))
             {
-                FrmMenu fc = new FrmMenu(NUsuario.Mostrar(login, password));
-                fc.id_empleado = NUsuario.Mostrar(login, password);
+                FrmMenu fc = new FrmMenu(NUsuario.get_idEmpleado(login, password));
+                //fc.id_empleado = NUsuario.Mostrar(login, password);
                 fc.btn_empleado.Visible = false;
                 fc.Show();
                 this.Hide();
             }
-            else { MessageBox.Show("Acceso Denegado al Sistema de Reservaciones", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            else
+            {
+               MessageBox.Show("Acceso Denegado al Sistema de Reservaciones", "Sistema de Reservas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_ingresar_Click(object sender, EventArgs e) {

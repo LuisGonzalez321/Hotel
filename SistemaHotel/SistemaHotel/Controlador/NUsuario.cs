@@ -19,7 +19,7 @@ namespace SistemaHotel.Controlador {
             return new DUsuario().Rol_Usuario(usuario,contraseña);
         }
 
-        public static int Mostrar(string usuario, string contraseña)
+        public static int get_idEmpleado(string usuario, string contraseña)
         {
            return new DUsuario().get_idEmpleado(usuario,contraseña);
         }

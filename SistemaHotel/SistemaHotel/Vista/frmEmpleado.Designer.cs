@@ -2,16 +2,16 @@
 {
     partial class FrmEmpleado
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        protected override void Dispose (bool disposing)
         {
             if (disposing && (components != null))
             {
@@ -20,18 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de componentes
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent ()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmpleado));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.txt_Buscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.btn_Cancelar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,41 +45,18 @@
             this.txt_PrimerApellido = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_PrimerNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.tabla_empleado = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_empleado)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(3)))), ((int)(((byte)(62)))));
-            this.panel1.Controls.Add(this.bunifuSeparator1);
-            this.panel1.Controls.Add(this.txt_Buscar);
-            this.panel1.Controls.Add(this.btn_Cancelar);
-            this.panel1.Controls.Add(this.btn_guardar);
-            this.panel1.Controls.Add(this.btn_Editar);
-            this.panel1.Controls.Add(this.btn_Nuevo);
-            this.panel1.Controls.Add(this.txt_Teléfono);
-            this.panel1.Controls.Add(this.txt_SegundoApellido);
-            this.panel1.Controls.Add(this.txt_Dirección);
-            this.panel1.Controls.Add(this.txt_SegundoNombre);
-            this.panel1.Controls.Add(this.txt_Correo);
-            this.panel1.Controls.Add(this.txt_PrimerApellido);
-            this.panel1.Controls.Add(this.txt_PrimerNombre);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 362);
-            this.panel1.TabIndex = 0;
             // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(314, 12);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(320, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(44, 348);
-            this.bunifuSeparator1.TabIndex = 29;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(44, 308);
+            this.bunifuSeparator1.TabIndex = 42;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
             // 
@@ -92,10 +68,10 @@
             this.txt_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.txt_Buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_Buscar.Icon")));
-            this.txt_Buscar.Location = new System.Drawing.Point(12, 48);
+            this.txt_Buscar.Location = new System.Drawing.Point(16, 25);
             this.txt_Buscar.Name = "txt_Buscar";
             this.txt_Buscar.Size = new System.Drawing.Size(241, 42);
-            this.txt_Buscar.TabIndex = 28;
+            this.txt_Buscar.TabIndex = 41;
             this.txt_Buscar.text = "Busque un Empleado";
             // 
             // btn_Cancelar
@@ -119,14 +95,14 @@
             this.btn_Cancelar.IconVisible = true;
             this.btn_Cancelar.IconZoom = 90D;
             this.btn_Cancelar.IsTab = false;
-            this.btn_Cancelar.Location = new System.Drawing.Point(12, 278);
+            this.btn_Cancelar.Location = new System.Drawing.Point(16, 255);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Cancelar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
             this.btn_Cancelar.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Cancelar.selected = false;
             this.btn_Cancelar.Size = new System.Drawing.Size(241, 42);
-            this.btn_Cancelar.TabIndex = 26;
+            this.btn_Cancelar.TabIndex = 40;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Cancelar.Textcolor = System.Drawing.Color.White;
@@ -153,19 +129,18 @@
             this.btn_guardar.IconVisible = true;
             this.btn_guardar.IconZoom = 90D;
             this.btn_guardar.IsTab = false;
-            this.btn_guardar.Location = new System.Drawing.Point(12, 221);
+            this.btn_guardar.Location = new System.Drawing.Point(16, 198);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
             this.btn_guardar.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_guardar.selected = false;
             this.btn_guardar.Size = new System.Drawing.Size(241, 42);
-            this.btn_guardar.TabIndex = 25;
+            this.btn_guardar.TabIndex = 39;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_guardar.Textcolor = System.Drawing.Color.White;
             this.btn_guardar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click_1);
             // 
             // btn_Editar
             // 
@@ -188,14 +163,14 @@
             this.btn_Editar.IconVisible = true;
             this.btn_Editar.IconZoom = 90D;
             this.btn_Editar.IsTab = false;
-            this.btn_Editar.Location = new System.Drawing.Point(12, 164);
+            this.btn_Editar.Location = new System.Drawing.Point(16, 141);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Editar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
             this.btn_Editar.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Editar.selected = false;
             this.btn_Editar.Size = new System.Drawing.Size(241, 42);
-            this.btn_Editar.TabIndex = 24;
+            this.btn_Editar.TabIndex = 38;
             this.btn_Editar.Text = "Editar";
             this.btn_Editar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Editar.Textcolor = System.Drawing.Color.White;
@@ -222,19 +197,18 @@
             this.btn_Nuevo.IconVisible = true;
             this.btn_Nuevo.IconZoom = 90D;
             this.btn_Nuevo.IsTab = false;
-            this.btn_Nuevo.Location = new System.Drawing.Point(12, 107);
+            this.btn_Nuevo.Location = new System.Drawing.Point(16, 84);
             this.btn_Nuevo.Name = "btn_Nuevo";
             this.btn_Nuevo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Nuevo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
             this.btn_Nuevo.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_Nuevo.selected = false;
             this.btn_Nuevo.Size = new System.Drawing.Size(241, 42);
-            this.btn_Nuevo.TabIndex = 23;
+            this.btn_Nuevo.TabIndex = 37;
             this.btn_Nuevo.Text = "Nuevo";
             this.btn_Nuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Nuevo.Textcolor = System.Drawing.Color.White;
             this.btn_Nuevo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
             // 
             // txt_Teléfono
             // 
@@ -248,11 +222,11 @@
             this.txt_Teléfono.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_Teléfono.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Teléfono.LineThickness = 3;
-            this.txt_Teléfono.Location = new System.Drawing.Point(415, 287);
+            this.txt_Teléfono.Location = new System.Drawing.Point(410, 264);
             this.txt_Teléfono.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Teléfono.Name = "txt_Teléfono";
             this.txt_Teléfono.Size = new System.Drawing.Size(328, 33);
-            this.txt_Teléfono.TabIndex = 22;
+            this.txt_Teléfono.TabIndex = 36;
             this.txt_Teléfono.Text = "Teléfono";
             this.txt_Teléfono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -268,11 +242,11 @@
             this.txt_SegundoApellido.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_SegundoApellido.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_SegundoApellido.LineThickness = 3;
-            this.txt_SegundoApellido.Location = new System.Drawing.Point(581, 116);
+            this.txt_SegundoApellido.Location = new System.Drawing.Point(576, 93);
             this.txt_SegundoApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SegundoApellido.Name = "txt_SegundoApellido";
             this.txt_SegundoApellido.Size = new System.Drawing.Size(162, 33);
-            this.txt_SegundoApellido.TabIndex = 21;
+            this.txt_SegundoApellido.TabIndex = 35;
             this.txt_SegundoApellido.Text = "Segundo Apellido";
             this.txt_SegundoApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -288,11 +262,11 @@
             this.txt_Dirección.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_Dirección.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Dirección.LineThickness = 3;
-            this.txt_Dirección.Location = new System.Drawing.Point(415, 173);
+            this.txt_Dirección.Location = new System.Drawing.Point(410, 150);
             this.txt_Dirección.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Dirección.Name = "txt_Dirección";
             this.txt_Dirección.Size = new System.Drawing.Size(328, 33);
-            this.txt_Dirección.TabIndex = 20;
+            this.txt_Dirección.TabIndex = 34;
             this.txt_Dirección.Tag = "";
             this.txt_Dirección.Text = "Dirección";
             this.txt_Dirección.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -309,11 +283,11 @@
             this.txt_SegundoNombre.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_SegundoNombre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_SegundoNombre.LineThickness = 3;
-            this.txt_SegundoNombre.Location = new System.Drawing.Point(581, 57);
+            this.txt_SegundoNombre.Location = new System.Drawing.Point(576, 34);
             this.txt_SegundoNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SegundoNombre.Name = "txt_SegundoNombre";
             this.txt_SegundoNombre.Size = new System.Drawing.Size(162, 33);
-            this.txt_SegundoNombre.TabIndex = 19;
+            this.txt_SegundoNombre.TabIndex = 33;
             this.txt_SegundoNombre.Text = "Segundo Nombre";
             this.txt_SegundoNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -329,11 +303,11 @@
             this.txt_Correo.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_Correo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Correo.LineThickness = 3;
-            this.txt_Correo.Location = new System.Drawing.Point(415, 230);
+            this.txt_Correo.Location = new System.Drawing.Point(410, 207);
             this.txt_Correo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(328, 33);
-            this.txt_Correo.TabIndex = 18;
+            this.txt_Correo.TabIndex = 32;
             this.txt_Correo.Text = "Correo";
             this.txt_Correo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -349,11 +323,11 @@
             this.txt_PrimerApellido.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_PrimerApellido.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_PrimerApellido.LineThickness = 3;
-            this.txt_PrimerApellido.Location = new System.Drawing.Point(415, 116);
+            this.txt_PrimerApellido.Location = new System.Drawing.Point(410, 93);
             this.txt_PrimerApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrimerApellido.Name = "txt_PrimerApellido";
             this.txt_PrimerApellido.Size = new System.Drawing.Size(158, 33);
-            this.txt_PrimerApellido.TabIndex = 17;
+            this.txt_PrimerApellido.TabIndex = 31;
             this.txt_PrimerApellido.Text = "Primer Apellido";
             this.txt_PrimerApellido.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -369,11 +343,11 @@
             this.txt_PrimerNombre.LineIdleColor = System.Drawing.Color.Gray;
             this.txt_PrimerNombre.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_PrimerNombre.LineThickness = 3;
-            this.txt_PrimerNombre.Location = new System.Drawing.Point(415, 57);
+            this.txt_PrimerNombre.Location = new System.Drawing.Point(410, 34);
             this.txt_PrimerNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PrimerNombre.Name = "txt_PrimerNombre";
             this.txt_PrimerNombre.Size = new System.Drawing.Size(158, 33);
-            this.txt_PrimerNombre.TabIndex = 16;
+            this.txt_PrimerNombre.TabIndex = 30;
             this.txt_PrimerNombre.Text = "Primer Nombre";
             this.txt_PrimerNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -385,9 +359,9 @@
             this.tabla_empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tabla_empleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(3)))), ((int)(((byte)(62)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -396,25 +370,36 @@
             this.tabla_empleado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabla_empleado.DoubleBuffered = true;
             this.tabla_empleado.EnableHeadersVisualStyles = false;
-            this.tabla_empleado.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.tabla_empleado.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.tabla_empleado.Location = new System.Drawing.Point(0, 362);
+            this.tabla_empleado.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(3)))), ((int)(((byte)(62)))));
+            this.tabla_empleado.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabla_empleado.Location = new System.Drawing.Point(0, 319);
             this.tabla_empleado.Name = "tabla_empleado";
             this.tabla_empleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tabla_empleado.Size = new System.Drawing.Size(801, 244);
-            this.tabla_empleado.TabIndex = 1;
+            this.tabla_empleado.Size = new System.Drawing.Size(776, 229);
+            this.tabla_empleado.TabIndex = 43;
             // 
-            // frmEmpleado
+            // FrmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 606);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(3)))), ((int)(((byte)(62)))));
             this.Controls.Add(this.tabla_empleado);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmEmpleado";
-            this.Text = "frmEmpleado";
-            this.panel1.ResumeLayout(false);
+            this.Controls.Add(this.bunifuSeparator1);
+            this.Controls.Add(this.txt_Buscar);
+            this.Controls.Add(this.btn_Cancelar);
+            this.Controls.Add(this.btn_guardar);
+            this.Controls.Add(this.btn_Editar);
+            this.Controls.Add(this.btn_Nuevo);
+            this.Controls.Add(this.txt_Teléfono);
+            this.Controls.Add(this.txt_SegundoApellido);
+            this.Controls.Add(this.txt_Dirección);
+            this.Controls.Add(this.txt_SegundoNombre);
+            this.Controls.Add(this.txt_Correo);
+            this.Controls.Add(this.txt_PrimerApellido);
+            this.Controls.Add(this.txt_PrimerNombre);
+            this.Name = "FrmEmpleado";
+            this.Size = new System.Drawing.Size(776, 548);
+            this.Load += new System.EventHandler(this.FrmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabla_empleado)).EndInit();
             this.ResumeLayout(false);
 
@@ -422,7 +407,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private Bunifu.Framework.UI.BunifuTextbox txt_Buscar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Cancelar;

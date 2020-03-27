@@ -1,33 +1,32 @@
-﻿using SistemaHotel.Controlador;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaHotel.Controlador;
 
 namespace SistemaHotel.Vista
 {
-    public partial class FrmEmpleado : Form
+    public partial class FrmEmpleado: UserControl
     {
         private int Id;
 
-        public FrmEmpleado()
+        public FrmEmpleado ()
         {
             InitializeComponent();
         }
 
-
-        private void UserControl1_Load(object sender, EventArgs e)
+        private void FrmEmpleado_Load (object sender, EventArgs e)
         {
             this.habilitar(true);
             this.tabla_empleado.DataSource = Controlador.NEmpleado.Mostrar_Empleados();
         }
 
-        public void habilitar(bool nuevo)
+        public void habilitar (bool nuevo)
         {
             if (nuevo)
             {
@@ -50,7 +49,8 @@ namespace SistemaHotel.Vista
             {
                 //Botones
                 this.btn_Nuevo.Enabled = false;
-                this.btn_Editar.Enabled = false; ;
+                this.btn_Editar.Enabled = false;
+                ;
                 this.btn_guardar.Enabled = true;
                 this.btn_Cancelar.Enabled = true;
                 // this.switch_habilitar.Enabled = true;
@@ -65,31 +65,18 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void txtBuscar_TextChanged (object sender, EventArgs e)
         {
             this.tabla_empleado.DataSource = NEmpleado.BuscarAsegurado(this.txt_Buscar.Text.Trim());
         }
 
-        public bool validar(Bunifu.Framework.UI.BunifuMaterialTextbox textbox, string texto)
+        public bool validar (Bunifu.Framework.UI.BunifuMaterialTextbox textbox, string texto)
         {
-            if (textbox.Text == texto)
-            {
-                // textbox.LineIdleColor = System.Drawing.Color.Red;
-                textbox.Text = texto;
-                return true;
-            }
-            return false;
+            return (textbox.Text == texto);
         }
 
-        private void btn_guardar_Click(object sender, EventArgs e)
+        private void btn_guardar_Click (object sender, EventArgs e)
         {
-
-            validar(txt_SegundoNombre, "Segundo Nombre");
-            validar(txt_PrimerApellido, "Primer Apellido");
-            validar(txt_SegundoApellido, "Segundo Apellido");
-            validar(txt_Correo, "Correo");
-            validar(txt_Dirección, "Dirección");
-            validar(txt_Teléfono, "Teléfono");
             if (validar(txt_PrimerNombre, "Primer Nombre") ||
                 validar(txt_SegundoNombre, "Segundo Nombre") ||
                 validar(txt_PrimerApellido, "Primer Apellido") ||
@@ -111,17 +98,17 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void btn_Nuevo_Click(object sender, EventArgs e)
+        private void btn_Nuevo_Click (object sender, EventArgs e)
         {
             habilitar(false);
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
+        private void btn_Cancelar_Click (object sender, EventArgs e)
         {
             habilitar(true);
         }
 
-        private void limpiar()
+        private void limpiar ()
         {
             this.txt_PrimerNombre.Text = "";
             this.txt_SegundoNombre.Text = "";
@@ -130,97 +117,33 @@ namespace SistemaHotel.Vista
             this.txt_Correo.Text = "";
             this.txt_Dirección.Text = "";
             this.txt_Teléfono.Text = "";
-         
+
         }
 
 
-        public void press()
+        public void PresionarCelda ()
         {
-            Id = Convert.ToInt32(this.tabla_empleado.CurrentRow.Cells["id_cliente"].Value);
-            this.txt_PrimerNombre.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells["Primer Nombre"].Value);
-            this.txt_SegundoNombre.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells["Segundo Nombre"].Value);
-            this.txt_PrimerApellido.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells["Primer Apellido"].Value);
-            this.txt_SegundoApellido.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells["Segundo Apellido"].Value);
-            this.txt_Dirección.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells["Dirección"].Value);
-            this.txt_Correo.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells["Correo"].Value);
-            this.txt_Teléfono.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells["Teléfono"].Value);
+            Id = Convert.ToInt32(this.tabla_empleado.CurrentRow.Cells ["id_cliente"].Value);
+            this.txt_PrimerNombre.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells ["Primer Nombre"].Value);
+            this.txt_SegundoNombre.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells ["Segundo Nombre"].Value);
+            this.txt_PrimerApellido.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells ["Primer Apellido"].Value);
+            this.txt_SegundoApellido.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells ["Segundo Apellido"].Value);
+            this.txt_Dirección.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells ["Dirección"].Value);
+            this.txt_Correo.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells ["Correo"].Value);
+            this.txt_Teléfono.Text = Convert.ToString(this.tabla_empleado.CurrentRow.Cells ["Teléfono"].Value);
         }
 
-        private void tabla_cliente_DoubleClick(object sender, EventArgs e)
+        private void tabla_cliente_DoubleClick (object sender, EventArgs e)
         {
-           press();
+            PresionarCelda();
         }
 
-        private void txt_Buscar_OnTextChange(object sender, EventArgs e)
+        private void txt_Buscar_OnTextChange (object sender, EventArgs e)
         {
             this.tabla_empleado.DataSource = NCliente.BuscarAsegurado(this.txt_Buscar.Text.Trim());
         }
 
-        public void soloLetras(KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        public void soloNúmeros(KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        public void soloNumsDecimal(KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (e.KeyChar.ToString().Equals("."))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txt_PrimerNombre_Enter(object sender, EventArgs e)
+        private void txt_PrimerNombre_Enter (object sender, EventArgs e)
         {
             if (txt_PrimerNombre.Text == "Primer Nombre")
             {
@@ -228,7 +151,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_PrimerNombre_Leave(object sender, EventArgs e)
+        private void txt_PrimerNombre_Leave (object sender, EventArgs e)
         {
             if (txt_PrimerNombre.Text == "")
             {
@@ -236,7 +159,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_SegundoNombre_Enter(object sender, EventArgs e)
+        private void txt_SegundoNombre_Enter (object sender, EventArgs e)
         {
             if (txt_SegundoNombre.Text == "Segundo Nombre")
             {
@@ -244,7 +167,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_SegundoNombre_Leave(object sender, EventArgs e)
+        private void txt_SegundoNombre_Leave (object sender, EventArgs e)
         {
             if (txt_SegundoNombre.Text == "")
             {
@@ -252,7 +175,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_PrimerApellido_Enter(object sender, EventArgs e)
+        private void txt_PrimerApellido_Enter (object sender, EventArgs e)
         {
             if (txt_PrimerApellido.Text == "Primer Apellido")
             {
@@ -260,7 +183,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_PrimerApellido_Leave(object sender, EventArgs e)
+        private void txt_PrimerApellido_Leave (object sender, EventArgs e)
         {
             if (txt_PrimerApellido.Text == "")
             {
@@ -268,7 +191,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_SegundoApellido_Enter(object sender, EventArgs e)
+        private void txt_SegundoApellido_Enter (object sender, EventArgs e)
         {
             if (txt_SegundoApellido.Text == "Segundo Apellido")
             {
@@ -276,7 +199,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_SegundoApellido_Leave(object sender, EventArgs e)
+        private void txt_SegundoApellido_Leave (object sender, EventArgs e)
         {
             if (txt_SegundoApellido.Text == "")
             {
@@ -284,7 +207,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Dirección_Enter(object sender, EventArgs e)
+        private void txt_Dirección_Enter (object sender, EventArgs e)
         {
             if (txt_Dirección.Text == "Dirección")
             {
@@ -292,7 +215,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Dirección_Leave(object sender, EventArgs e)
+        private void txt_Dirección_Leave (object sender, EventArgs e)
         {
             if (txt_Dirección.Text == "")
             {
@@ -300,7 +223,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Correo_Enter(object sender, EventArgs e)
+        private void txt_Correo_Enter (object sender, EventArgs e)
         {
             if (txt_Correo.Text == "Correo")
             {
@@ -308,7 +231,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Correo_Leave(object sender, EventArgs e)
+        private void txt_Correo_Leave (object sender, EventArgs e)
         {
             if (txt_Correo.Text == "")
             {
@@ -316,7 +239,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Teléfono_Enter(object sender, EventArgs e)
+        private void txt_Teléfono_Enter (object sender, EventArgs e)
         {
             if (txt_Teléfono.Text == "Teléfono")
             {
@@ -324,7 +247,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Teléfono_Leave(object sender, EventArgs e)
+        private void txt_Teléfono_Leave (object sender, EventArgs e)
         {
             if (txt_Teléfono.Text == "")
             {
@@ -332,7 +255,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Buscar_Enter(object sender, EventArgs e)
+        private void txt_Buscar_Enter (object sender, EventArgs e)
         {
             if (txt_Buscar.text == "Busque un Cliente")
             {
@@ -340,7 +263,7 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Buscar_Leave(object sender, EventArgs e)
+        private void txt_Buscar_Leave (object sender, EventArgs e)
         {
             if (txt_Buscar.text == "")
             {
@@ -348,12 +271,12 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Teléfono_KeyPress(object sender, KeyPressEventArgs e)
+        private void txt_Teléfono_KeyPress (object sender, KeyPressEventArgs e)
         {
-            soloNúmeros(e);
+            Controlador.Tools.soloNúmeros(e);
         }
 
-        private void btn_Editar_Click(object sender, EventArgs e)
+        private void btn_Editar_Click (object sender, EventArgs e)
         {
 
         }

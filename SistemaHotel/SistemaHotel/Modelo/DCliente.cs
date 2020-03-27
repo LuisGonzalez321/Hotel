@@ -10,7 +10,6 @@ using System.Windows.Forms;
 namespace SistemaHotel.Modelo {
     class DCliente {
         // Variables de Clase
-        private int id_cliente;
         private string p_nombre;
         private string s_nombre;
         private string p_apellido;

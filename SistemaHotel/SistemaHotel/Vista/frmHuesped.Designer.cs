@@ -28,7 +28,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHuesped));
             this.tabla_huesped = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.txt_Buscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.btn_Cancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Editar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -82,20 +81,6 @@
             this.bunifuSeparator1.TabIndex = 32;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
-            // 
-            // txt_Buscar
-            // 
-            this.txt_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(3)))), ((int)(((byte)(62)))));
-            this.txt_Buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_Buscar.BackgroundImage")));
-            this.txt_Buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txt_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.Silver;
-            this.txt_Buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_Buscar.Icon")));
-            this.txt_Buscar.Location = new System.Drawing.Point(21, 22);
-            this.txt_Buscar.Name = "txt_Buscar";
-            this.txt_Buscar.Size = new System.Drawing.Size(241, 42);
-            this.txt_Buscar.TabIndex = 31;
-            this.txt_Buscar.text = "Buscar Huésped";
             // 
             // btn_Cancelar
             // 
@@ -403,7 +388,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(3)))), ((int)(((byte)(61)))));
             this.Controls.Add(this.txt_nacionalidad);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.txt_Buscar);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.btn_Editar);
@@ -428,7 +412,6 @@
 
         private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_huesped;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
-        private Bunifu.Framework.UI.BunifuTextbox txt_Buscar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Cancelar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_guardar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Editar;

@@ -67,7 +67,7 @@ namespace SistemaHotel.Vista
 
         private void txtBuscar_TextChanged (object sender, EventArgs e)
         {
-            this.tabla_empleado.DataSource = NEmpleado.BuscarAsegurado(this.txt_Buscar.Text.Trim());
+           // this.tabla_empleado.DataSource = NEmpleado.BuscarAsegurado(this.txt_Buscar.Text.Trim());
         }
 
         public bool validar (Bunifu.Framework.UI.BunifuMaterialTextbox textbox, string texto)
@@ -140,7 +140,7 @@ namespace SistemaHotel.Vista
 
         private void txt_Buscar_OnTextChange (object sender, EventArgs e)
         {
-            this.tabla_empleado.DataSource = NCliente.BuscarAsegurado(this.txt_Buscar.Text.Trim());
+          //  this.tabla_empleado.DataSource = NCliente.BuscarAsegurado(this.txt_Buscar.Text.Trim());
         }
 
         private void txt_PrimerNombre_Enter (object sender, EventArgs e)
@@ -255,21 +255,21 @@ namespace SistemaHotel.Vista
             }
         }
 
-        private void txt_Buscar_Enter (object sender, EventArgs e)
-        {
-            if (txt_Buscar.text == "Busque un Cliente")
-            {
-                txt_Buscar.text = "";
-            }
-        }
+        //private void txt_Buscar_Enter (object sender, EventArgs e)
+        //{
+        //    if (txt_Buscar.text == "Busque un Cliente")
+        //    {
+        //        txt_Buscar.text = "";
+        //    }
+        //}
 
-        private void txt_Buscar_Leave (object sender, EventArgs e)
-        {
-            if (txt_Buscar.text == "")
-            {
-                txt_Buscar.text = "Busque un Cliente";
-            }
-        }
+        //private void txt_Buscar_Leave (object sender, EventArgs e)
+        //{
+        //    if (txt_Buscar.text == "")
+        //    {
+        //        txt_Buscar.text = "Busque un Cliente";
+        //    }
+        //}
 
         private void txt_Teléfono_KeyPress (object sender, KeyPressEventArgs e)
         {

@@ -175,7 +175,7 @@ namespace SistemaHotel.Vista {
 
         private void txt_Buscar_OnTextChange(object sender, EventArgs e)
         {
-            this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(this.txt_Buscar.Text.Trim());
+          //  this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(this.txt_Buscar.Text.Trim());
         }
 
 
@@ -258,15 +258,15 @@ namespace SistemaHotel.Vista {
             if (txt_Teléfono.Text == "") txt_Teléfono.Text = "Teléfono";
         }
 
-        private void txt_Buscar_Enter(object sender, EventArgs e)
-        {
-            if (txt_Buscar.text == "Busque un Cliente") txt_Buscar.text = "";
-        }
+        //private void txt_Buscar_Enter(object sender, EventArgs e)
+        //{
+        //    if (txt_Buscar.text == "Busque un Cliente") txt_Buscar.text = "";
+        //}
 
-        private void txt_Buscar_Leave(object sender, EventArgs e)
-        {
-            if (txt_Buscar.text == "") txt_Buscar.text = "Busque un Cliente";
-        }
+        //private void txt_Buscar_Leave(object sender, EventArgs e)
+        //{
+        //    if (txt_Buscar.text == "") txt_Buscar.text = "Busque un Cliente";
+        //}
 
         private void txt_Teléfono_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -352,7 +352,7 @@ namespace SistemaHotel.Vista {
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(txt_Buscar.Text.Trim());
+            //this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(txt_Buscar.Text.Trim());
         }
 
     }

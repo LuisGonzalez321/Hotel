@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent ()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReserva));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.data_reserva = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -58,7 +59,6 @@
             this.combox_divisa = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.combox_pago = new Bunifu.Framework.UI.BunifuDropdown();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_reserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_cliente)).BeginInit();
@@ -100,6 +100,18 @@
             this.panel1.Size = new System.Drawing.Size(789, 561);
             this.panel1.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Location = new System.Drawing.Point(20, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 25);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "REGISTRO DE RESERVAS";
+            // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.AutoSize = true;
@@ -126,19 +138,19 @@
             // 
             // data_reserva
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.data_reserva.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.data_reserva.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.data_reserva.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.data_reserva.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data_reserva.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_reserva.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_reserva.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.data_reserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_reserva.DoubleBuffered = true;
             this.data_reserva.EnableHeadersVisualStyles = false;
@@ -152,19 +164,19 @@
             // 
             // data_cliente
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.data_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.data_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.data_cliente.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.data_cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.data_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data_cliente.DoubleBuffered = true;
             this.data_cliente.EnableHeadersVisualStyles = false;
@@ -287,6 +299,7 @@
             // 
             // btn_editar
             // 
+            this.btn_editar.Active = false;
             this.btn_editar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -322,6 +335,7 @@
             // 
             // btn_addhuesped
             // 
+            this.btn_addhuesped.Active = false;
             this.btn_addhuesped.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_addhuesped.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_addhuesped.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -357,6 +371,7 @@
             // 
             // btn_nuevo
             // 
+            this.btn_nuevo.Active = false;
             this.btn_nuevo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -391,6 +406,7 @@
             // 
             // btn_cancelar
             // 
+            this.btn_cancelar.Active = false;
             this.btn_cancelar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -426,6 +442,7 @@
             // 
             // btn_guardar
             // 
+            this.btn_guardar.Active = false;
             this.btn_guardar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -475,17 +492,14 @@
             // 
             this.combox_estado.BackColor = System.Drawing.Color.Transparent;
             this.combox_estado.BorderRadius = 3;
+            this.combox_estado.DisabledColor = System.Drawing.Color.Gray;
             this.combox_estado.ForeColor = System.Drawing.Color.White;
-            this.combox_estado.Items = new string[] {
-        "PAGADO",
-        "RESERVADO",
-        "PENALIZADO",
-        "CANCELADO"};
+            this.combox_estado.items = new string[0];
             this.combox_estado.Location = new System.Drawing.Point(152, 200);
             this.combox_estado.Name = "combox_estado";
             this.combox_estado.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.combox_estado.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
-            this.combox_estado.selectedIndex = 0;
+            this.combox_estado.selectedIndex = -1;
             this.combox_estado.Size = new System.Drawing.Size(197, 35);
             this.combox_estado.TabIndex = 34;
             // 
@@ -505,11 +519,12 @@
             // 
             this.combox_divisa.BackColor = System.Drawing.Color.Transparent;
             this.combox_divisa.BorderRadius = 3;
+            this.combox_divisa.DisabledColor = System.Drawing.Color.Gray;
             this.combox_divisa.ForeColor = System.Drawing.Color.White;
-            this.combox_divisa.Items = new string[] {
+            this.combox_divisa.items = new string[] {
         "COR",
-        "USD",
-        "EUR"};
+        "EUR",
+        "DOL"};
             this.combox_divisa.Location = new System.Drawing.Point(152, 147);
             this.combox_divisa.Name = "combox_divisa";
             this.combox_divisa.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
@@ -534,8 +549,9 @@
             // 
             this.combox_pago.BackColor = System.Drawing.Color.Transparent;
             this.combox_pago.BorderRadius = 3;
+            this.combox_pago.DisabledColor = System.Drawing.Color.Gray;
             this.combox_pago.ForeColor = System.Drawing.Color.White;
-            this.combox_pago.Items = new string[] {
+            this.combox_pago.items = new string[] {
         "CONTADO",
         "CREDITO",
         "CHEQUE"};
@@ -546,18 +562,6 @@
             this.combox_pago.selectedIndex = 0;
             this.combox_pago.Size = new System.Drawing.Size(197, 35);
             this.combox_pago.TabIndex = 30;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(20, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 25);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "REGISTRO DE RESERVAS";
             // 
             // FrmReserva
             // 

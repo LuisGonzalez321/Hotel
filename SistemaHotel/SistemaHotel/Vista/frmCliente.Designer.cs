@@ -23,10 +23,7 @@
         /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent() {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
-            this.tabla_cliente = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.txt_PrimerNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_PrimerApellido = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_Correo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -40,48 +37,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.switch_habilitar = new Bunifu.Framework.UI.BunifuSwitch();
-            this.txt_Buscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.btn_Cancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_guardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Editar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Nuevo = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_cliente)).BeginInit();
+            this.tabla_cliente = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_cliente)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabla_cliente
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tabla_cliente.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.tabla_cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabla_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tabla_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_cliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabla_cliente.DoubleBuffered = true;
-            this.tabla_cliente.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.tabla_cliente.EnableHeadersVisualStyles = false;
-            this.tabla_cliente.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.tabla_cliente.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_cliente.Location = new System.Drawing.Point(0, 349);
-            this.tabla_cliente.MultiSelect = false;
-            this.tabla_cliente.Name = "tabla_cliente";
-            this.tabla_cliente.ReadOnly = true;
-            this.tabla_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tabla_cliente.Size = new System.Drawing.Size(817, 229);
-            this.tabla_cliente.TabIndex = 1;
-            this.tabla_cliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla_cliente_CellDoubleClick);
             // 
             // txt_PrimerNombre
             // 
+            this.txt_PrimerNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_PrimerNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_PrimerNombre.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_PrimerNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_PrimerNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_PrimerNombre.ForeColor = System.Drawing.Color.White;
@@ -94,6 +63,7 @@
             this.txt_PrimerNombre.LineThickness = 3;
             this.txt_PrimerNombre.Location = new System.Drawing.Point(412, 59);
             this.txt_PrimerNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_PrimerNombre.MaxLength = 32767;
             this.txt_PrimerNombre.Name = "txt_PrimerNombre";
             this.txt_PrimerNombre.Size = new System.Drawing.Size(158, 37);
             this.txt_PrimerNombre.TabIndex = 0;
@@ -106,6 +76,9 @@
             // 
             // txt_PrimerApellido
             // 
+            this.txt_PrimerApellido.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_PrimerApellido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_PrimerApellido.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_PrimerApellido.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_PrimerApellido.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_PrimerApellido.ForeColor = System.Drawing.Color.White;
@@ -118,6 +91,7 @@
             this.txt_PrimerApellido.LineThickness = 3;
             this.txt_PrimerApellido.Location = new System.Drawing.Point(412, 116);
             this.txt_PrimerApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_PrimerApellido.MaxLength = 32767;
             this.txt_PrimerApellido.Name = "txt_PrimerApellido";
             this.txt_PrimerApellido.Size = new System.Drawing.Size(158, 37);
             this.txt_PrimerApellido.TabIndex = 1;
@@ -130,6 +104,9 @@
             // 
             // txt_Correo
             // 
+            this.txt_Correo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Correo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Correo.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Correo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Correo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Correo.ForeColor = System.Drawing.Color.White;
@@ -142,6 +119,7 @@
             this.txt_Correo.LineThickness = 3;
             this.txt_Correo.Location = new System.Drawing.Point(412, 212);
             this.txt_Correo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Correo.MaxLength = 32767;
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(328, 37);
             this.txt_Correo.TabIndex = 2;
@@ -153,6 +131,9 @@
             // 
             // txt_SegundoNombre
             // 
+            this.txt_SegundoNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_SegundoNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_SegundoNombre.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_SegundoNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_SegundoNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_SegundoNombre.ForeColor = System.Drawing.Color.White;
@@ -165,6 +146,7 @@
             this.txt_SegundoNombre.LineThickness = 3;
             this.txt_SegundoNombre.Location = new System.Drawing.Point(578, 59);
             this.txt_SegundoNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SegundoNombre.MaxLength = 32767;
             this.txt_SegundoNombre.Name = "txt_SegundoNombre";
             this.txt_SegundoNombre.Size = new System.Drawing.Size(162, 37);
             this.txt_SegundoNombre.TabIndex = 3;
@@ -177,6 +159,9 @@
             // 
             // txt_Dirección
             // 
+            this.txt_Dirección.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Dirección.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Dirección.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Dirección.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Dirección.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Dirección.ForeColor = System.Drawing.Color.White;
@@ -189,6 +174,7 @@
             this.txt_Dirección.LineThickness = 3;
             this.txt_Dirección.Location = new System.Drawing.Point(412, 164);
             this.txt_Dirección.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Dirección.MaxLength = 32767;
             this.txt_Dirección.Name = "txt_Dirección";
             this.txt_Dirección.Size = new System.Drawing.Size(328, 37);
             this.txt_Dirección.TabIndex = 4;
@@ -201,6 +187,9 @@
             // 
             // txt_SegundoApellido
             // 
+            this.txt_SegundoApellido.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_SegundoApellido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_SegundoApellido.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_SegundoApellido.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_SegundoApellido.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_SegundoApellido.ForeColor = System.Drawing.Color.White;
@@ -213,6 +202,7 @@
             this.txt_SegundoApellido.LineThickness = 3;
             this.txt_SegundoApellido.Location = new System.Drawing.Point(578, 116);
             this.txt_SegundoApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SegundoApellido.MaxLength = 32767;
             this.txt_SegundoApellido.Name = "txt_SegundoApellido";
             this.txt_SegundoApellido.Size = new System.Drawing.Size(162, 37);
             this.txt_SegundoApellido.TabIndex = 5;
@@ -225,6 +215,9 @@
             // 
             // txt_Teléfono
             // 
+            this.txt_Teléfono.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Teléfono.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Teléfono.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Teléfono.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Teléfono.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Teléfono.ForeColor = System.Drawing.Color.White;
@@ -237,6 +230,7 @@
             this.txt_Teléfono.LineThickness = 3;
             this.txt_Teléfono.Location = new System.Drawing.Point(412, 260);
             this.txt_Teléfono.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Teléfono.MaxLength = 32767;
             this.txt_Teléfono.Name = "txt_Teléfono";
             this.txt_Teléfono.Size = new System.Drawing.Size(328, 37);
             this.txt_Teléfono.TabIndex = 6;
@@ -275,7 +269,6 @@
             this.panel1.Controls.Add(this.bunifuSeparator2);
             this.panel1.Controls.Add(this.switch_habilitar);
             this.panel1.Controls.Add(this.bunifuSeparator1);
-            this.panel1.Controls.Add(this.txt_Buscar);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Controls.Add(this.btn_Cancelar);
             this.panel1.Controls.Add(this.btn_guardar);
@@ -333,25 +326,9 @@
             this.switch_habilitar.Value = true;
             this.switch_habilitar.Click += new System.EventHandler(this.switch_habilitar_Click);
             // 
-            // txt_Buscar
-            // 
-            this.txt_Buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(3)))), ((int)(((byte)(62)))));
-            this.txt_Buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_Buscar.BackgroundImage")));
-            this.txt_Buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txt_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Buscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
-            this.txt_Buscar.Icon = ((System.Drawing.Image)(resources.GetObject("txt_Buscar.Icon")));
-            this.txt_Buscar.Location = new System.Drawing.Point(14, 54);
-            this.txt_Buscar.Name = "txt_Buscar";
-            this.txt_Buscar.Size = new System.Drawing.Size(241, 42);
-            this.txt_Buscar.TabIndex = 13;
-            this.txt_Buscar.text = "Buscar";
-            this.txt_Buscar.OnTextChange += new System.EventHandler(this.txt_Buscar_OnTextChange);
-            this.txt_Buscar.Enter += new System.EventHandler(this.txt_Buscar_Enter);
-            this.txt_Buscar.Leave += new System.EventHandler(this.txt_Buscar_Leave);
-            // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.Active = false;
             this.btn_Cancelar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -387,6 +364,7 @@
             // 
             // btn_guardar
             // 
+            this.btn_guardar.Active = false;
             this.btn_guardar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -422,6 +400,7 @@
             // 
             // btn_Editar
             // 
+            this.btn_Editar.Active = false;
             this.btn_Editar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -457,6 +436,7 @@
             // 
             // btn_Nuevo
             // 
+            this.btn_Nuevo.Active = false;
             this.btn_Nuevo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -490,6 +470,14 @@
             this.btn_Nuevo.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Nuevo.Click += new System.EventHandler(this.btn_Nuevo_Click);
             // 
+            // tabla_cliente
+            // 
+            this.tabla_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabla_cliente.Location = new System.Drawing.Point(17, 390);
+            this.tabla_cliente.Name = "tabla_cliente";
+            this.tabla_cliente.Size = new System.Drawing.Size(240, 150);
+            this.tabla_cliente.TabIndex = 1;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -500,15 +488,14 @@
             this.Name = "FrmCliente";
             this.Size = new System.Drawing.Size(817, 578);
             this.Load += new System.EventHandler(this.UserControl1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_cliente)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_cliente)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_cliente;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_PrimerNombre;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_PrimerApellido;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txt_Correo;
@@ -521,11 +508,11 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_guardar;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Cancelar;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuTextbox txt_Buscar;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuSwitch switch_habilitar;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.DataGridView tabla_cliente;
     }
 }

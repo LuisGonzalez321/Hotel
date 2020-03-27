@@ -25,7 +25,7 @@ namespace SistemaHotel.Vista {
         {
             bool flag = NHuesped.Insertar_Huesped(txt_PrimerNombre.Text,txt_SegundoNombre.Text,txt_PrimerApellido.Text,txt_SegundoApellido.Text, txt_Dirección.Text,"90909090", txt_nacionalidad.Text, txt_Correo.Text);
             if (flag){
-                MessageBox.Show("Ingresado exitosa mente");
+                MessageBox.Show("Ingresado exitosamente");
                 this.Hide();
             }
             else {

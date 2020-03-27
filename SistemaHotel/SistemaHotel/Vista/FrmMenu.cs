@@ -19,14 +19,13 @@ namespace SistemaHotel.Vista {
 
         public FrmMenu(int id_empleado) {
             InitializeComponent();
-            this.tab.Hide();
             this.SetStyle(ControlStyles.ResizeRedraw,true);
             this.id_empleado = id_empleado;
         }
 
         private void FormMenu_Load(object sender, EventArgs e){
-            this.tabla_habitación.DataSource = Controlador.NHabitación.Mostrar();
-            if (id_empleado>0){
+            if (id_empleado>0)
+            {
                 btn_empleado.Visible = false;
             }
         }
@@ -50,16 +49,21 @@ namespace SistemaHotel.Vista {
             base.WndProc(ref m);
         }
         
-        private void btn_salir_Click(object sender, EventArgs e) {
+        private void btn_salir_Click(object sender, EventArgs e)
+        {
             Environment.Exit(0);
         }
 
-        private void btn_menu_Click(object sender, EventArgs e) {
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
             bool flag = this.panel_menu.Visible;
-            if (flag) {
+            if (flag)
+            {
                 this.btn_salir.SetBounds(945,0,37,36);
                 this.panel_menu.Visible = false;
-            } else {
+            }
+            else
+            {
                 this.panel_menu.Visible = true;
                 this.btn_salir.SetBounds(745, 0, 37, 36);
             }
@@ -67,109 +71,19 @@ namespace SistemaHotel.Vista {
         private void btn_home_Click(object sender, EventArgs e){
             this.Controls.Clear();
             this.InitializeComponent();
-            this.tab.Hide();
         }
-
-        private void btn_Habitación_Click(object sender, EventArgs e)
-        {
-            this.tab.Show();
-        }
-
-        private void btn_reserar_Click(object sender, EventArgs e)
-        {
-            FrmCliente frmcliente = new FrmCliente(Convert.ToInt32(combox_idHab.selectedValue), id_empleado, this.date_fechaEntrada.Value, this.date_FechaSalida.Value);
-            int width = tab.Size.Width;
-            int height = tab.Size.Height;
-            int x = 201; 
-            int y = 41;
-            frmcliente.SetBounds(x, y, width, height);
-            this.tab.Hide();
-            this.Controls.Add(frmcliente);
-        }
-
+      
         private void btn_cliente_Click(object sender, EventArgs e){
 
             this.Controls.Clear();
             this.InitializeComponent();
-            this.tab.Hide();
-
             FrmCliente usercontrol = new FrmCliente();
-            int width = tab.Size.Width;
-            int height = tab.Size.Height;
-            int x = 201;
-            int y = 41;
-            usercontrol.SetBounds(x, y, width, height);
-            this.tab.Hide();
             this.Controls.Add(usercontrol);
         }
 
         private void btn_reservas_Click(object sender, EventArgs e){
             FrmReserva frmreserva = new FrmReserva();
             frmreserva.Show();
-        }
-
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-            DateTime fechaEntrada = this.date_fechaEntrada.Value;
-            DateTime fechaSalida = this.date_FechaSalida.Value;
-            if (switch_habilitar.Value == false)
-            {
-                int id = Convert.ToInt32(combox_idHab.selectedValue);
-                tabla_habitación.DataSource = Controlador.NHabitación.Disponibilidad_Habitación(id, fechaEntrada, fechaSalida);
-            }
-            else
-            {
-                tabla_habitación.DataSource = Controlador.NHabitación.Estado_Habitacion(fechaEntrada, fechaSalida);
-            }
-        }
-
-        private void switch_habilitar_Click(object sender, EventArgs e)
-        {
-            if (switch_habilitar.Value == true)
-            {
-                combox_idHab.Enabled = false;
-            }
-            else
-            {
-                combox_idHab.Enabled = true;
-            }
-        }
-
-        private void btn_reportes_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void combox_hab_onItemSelected(object sender, EventArgs e)
-        {
-            int i = combox_hab.selectedIndex;
-            switch (i){
-                case 1:{
-                        this.image_hab.Image = global::SistemaHotel.Properties.Resources.habitación_básica;
-                        break;}
-                case 2:{
-                        this.image_hab.Image = global::SistemaHotel.Properties.Resources.habitació_Ejecutiva;
-                        break;}
-                case 3:{
-                        this.image_hab.Image = global::SistemaHotel.Properties.Resources.habitación_presidencial;
-                        break;}
-            }
-        }
-
-        private void btn_huesped_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            this.InitializeComponent();
-            this.tab.Hide();
-
-            FrmHuesped usercontrol = new FrmHuesped();
-            int width = tab.Size.Width;
-            int height = tab.Size.Height;
-            int x = 201;
-            int y = 41;
-            usercontrol.SetBounds(x, y, width, height);
-            this.tab.Hide();
-            this.Controls.Add(usercontrol);
         }
 
         private void btn_servicio_Click(object sender, EventArgs e)

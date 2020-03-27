@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReserva));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReserva));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.data_reserva = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.data_cliente = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.label_lista = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.lista_huesped = new System.Windows.Forms.ListBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuSeparator6 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -51,17 +58,10 @@
             this.combox_divisa = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.combox_pago = new Bunifu.Framework.UI.BunifuDropdown();
-            this.lista_huesped = new System.Windows.Forms.ListBox();
-            this.bunifuSeparator4 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.label_lista = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.data_cliente = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.data_reserva = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data_cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_reserva)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_cliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,6 +96,119 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(978, 651);
             this.panel1.TabIndex = 0;
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.AutoSize = true;
+            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.White;
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(665, 77);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(141, 21);
+            this.bunifuCustomLabel6.TabIndex = 60;
+            this.bunifuCustomLabel6.Text = "Lista de huespedes";
+            // 
+            // listBox1
+            // 
+            this.listBox1.AllowDrop = true;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.ColumnWidth = 5;
+            this.listBox1.Enabled = false;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(449, 101);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(141, 234);
+            this.listBox1.TabIndex = 59;
+            // 
+            // data_reserva
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.data_reserva.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.data_reserva.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.data_reserva.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.data_reserva.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_reserva.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.data_reserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_reserva.DoubleBuffered = true;
+            this.data_reserva.EnableHeadersVisualStyles = false;
+            this.data_reserva.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.data_reserva.HeaderForeColor = System.Drawing.Color.White;
+            this.data_reserva.Location = new System.Drawing.Point(449, 393);
+            this.data_reserva.Name = "data_reserva";
+            this.data_reserva.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.data_reserva.Size = new System.Drawing.Size(519, 249);
+            this.data_reserva.TabIndex = 58;
+            this.data_reserva.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_reserva_CellClick);
+            // 
+            // data_cliente
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.data_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.data_cliente.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.data_cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.data_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.data_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.data_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_cliente.DoubleBuffered = true;
+            this.data_cliente.EnableHeadersVisualStyles = false;
+            this.data_cliente.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.data_cliente.HeaderForeColor = System.Drawing.Color.White;
+            this.data_cliente.Location = new System.Drawing.Point(24, 393);
+            this.data_cliente.Name = "data_cliente";
+            this.data_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.data_cliente.Size = new System.Drawing.Size(403, 249);
+            this.data_cliente.TabIndex = 57;
+            // 
+            // label_lista
+            // 
+            this.label_lista.AutoSize = true;
+            this.label_lista.BackColor = System.Drawing.Color.Transparent;
+            this.label_lista.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_lista.ForeColor = System.Drawing.Color.White;
+            this.label_lista.Location = new System.Drawing.Point(449, 77);
+            this.label_lista.Name = "label_lista";
+            this.label_lista.Size = new System.Drawing.Size(139, 21);
+            this.label_lista.TabIndex = 56;
+            this.label_lista.Text = "Reserva del cliente";
+            // 
+            // bunifuSeparator4
+            // 
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator4.LineThickness = 1;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(433, 36);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Size = new System.Drawing.Size(10, 612);
+            this.bunifuSeparator4.TabIndex = 55;
+            this.bunifuSeparator4.Transparency = 255;
+            this.bunifuSeparator4.Vertical = true;
+            // 
+            // lista_huesped
+            // 
+            this.lista_huesped.AllowDrop = true;
+            this.lista_huesped.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lista_huesped.ColumnWidth = 5;
+            this.lista_huesped.Enabled = false;
+            this.lista_huesped.FormattingEnabled = true;
+            this.lista_huesped.Location = new System.Drawing.Point(596, 101);
+            this.lista_huesped.Name = "lista_huesped";
+            this.lista_huesped.Size = new System.Drawing.Size(349, 234);
+            this.lista_huesped.TabIndex = 54;
             // 
             // bunifuCustomLabel5
             // 
@@ -438,119 +551,7 @@
             this.combox_pago.Size = new System.Drawing.Size(197, 35);
             this.combox_pago.TabIndex = 30;
             // 
-            // lista_huesped
-            // 
-            this.lista_huesped.AllowDrop = true;
-            this.lista_huesped.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lista_huesped.ColumnWidth = 5;
-            this.lista_huesped.Enabled = false;
-            this.lista_huesped.FormattingEnabled = true;
-            this.lista_huesped.Location = new System.Drawing.Point(596, 101);
-            this.lista_huesped.Name = "lista_huesped";
-            this.lista_huesped.Size = new System.Drawing.Size(349, 234);
-            this.lista_huesped.TabIndex = 54;
-            // 
-            // bunifuSeparator4
-            // 
-            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator4.LineThickness = 1;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(433, 36);
-            this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Size = new System.Drawing.Size(10, 612);
-            this.bunifuSeparator4.TabIndex = 55;
-            this.bunifuSeparator4.Transparency = 255;
-            this.bunifuSeparator4.Vertical = true;
-            // 
-            // label_lista
-            // 
-            this.label_lista.AutoSize = true;
-            this.label_lista.BackColor = System.Drawing.Color.Transparent;
-            this.label_lista.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_lista.ForeColor = System.Drawing.Color.White;
-            this.label_lista.Location = new System.Drawing.Point(449, 77);
-            this.label_lista.Name = "label_lista";
-            this.label_lista.Size = new System.Drawing.Size(139, 21);
-            this.label_lista.TabIndex = 56;
-            this.label_lista.Text = "Reserva del cliente";
-            // 
-            // data_cliente
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.data_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.data_cliente.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.data_cliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.data_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.data_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_cliente.DoubleBuffered = true;
-            this.data_cliente.EnableHeadersVisualStyles = false;
-            this.data_cliente.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.data_cliente.HeaderForeColor = System.Drawing.Color.White;
-            this.data_cliente.Location = new System.Drawing.Point(24, 393);
-            this.data_cliente.Name = "data_cliente";
-            this.data_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.data_cliente.Size = new System.Drawing.Size(403, 249);
-            this.data_cliente.TabIndex = 57;
-            // 
-            // data_reserva
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.data_reserva.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.data_reserva.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.data_reserva.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.data_reserva.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.data_reserva.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.data_reserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_reserva.DoubleBuffered = true;
-            this.data_reserva.EnableHeadersVisualStyles = false;
-            this.data_reserva.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.data_reserva.HeaderForeColor = System.Drawing.Color.White;
-            this.data_reserva.Location = new System.Drawing.Point(449, 393);
-            this.data_reserva.Name = "data_reserva";
-            this.data_reserva.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.data_reserva.Size = new System.Drawing.Size(519, 249);
-            this.data_reserva.TabIndex = 58;
-            // 
-            // listBox1
-            // 
-            this.listBox1.AllowDrop = true;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.ColumnWidth = 5;
-            this.listBox1.Enabled = false;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(449, 101);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(141, 234);
-            this.listBox1.TabIndex = 59;
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(665, 77);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(141, 21);
-            this.bunifuCustomLabel6.TabIndex = 60;
-            this.bunifuCustomLabel6.Text = "Lista de huespedes";
-            // 
-            // frmReserva
+            // FrmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -558,15 +559,15 @@
             this.ClientSize = new System.Drawing.Size(980, 691);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmReserva";
+            this.Name = "FrmReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ejemplo";
             this.Load += new System.EventHandler(this.ejemplo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.data_cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_reserva)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_cliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_cerrar)).EndInit();
             this.ResumeLayout(false);
 
         }

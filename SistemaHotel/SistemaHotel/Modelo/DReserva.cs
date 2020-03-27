@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace SistemaHotel.Modelo
 {
-    class DReserva
+    public class DReserva
     {
 
         private int idReserva;
@@ -33,105 +33,36 @@ namespace SistemaHotel.Modelo
             this.stat = stat;
         }
 
-        public int IdReserva
-        {
-            get {
-                return idReserva;
-            }
-
-            set {
-                idReserva = value;
-            }
-        }
+        public int IdReserva{ get;set; }
 
         public int IdCliente
         {
-            get {
-                return idCliente;
-            }
-
-            set {
-                idCliente = value;
-            }
+            get;set;
         }
 
         public int IdEmpleado
         {
-            get {
-                return idEmpleado;
-            }
-
-            set {
-                idEmpleado = value;
-            }
+            get;set;
         }
 
         public DateTime FechaReserva
         {
-            get {
-                return fechaReserva;
-            }
-
-            set {
-                fechaReserva = value;
-            }
+            get;set;
         }
 
         public string FormadePago
         {
-            get {
-                return formadePago;
-            }
-
-            set {
-                formadePago = value;
-            }
+            get;set;
         }
 
         public string Divisa
         {
-            get {
-                return divisa;
-            }
-
-            set {
-                divisa = value;
-            }
+            get;set;
         }
 
         public string Stat
         {
-            get {
-                return stat;
-            }
-
-            set {
-                stat = value;
-            }
-        }
-
-        public DataTable MostrarReservas()
-        {
-            DataTable DtResultado = new DataTable("reserva");
-            SqlConnection SqlCon = new SqlConnection();
-            try
-            {
-                SqlCon.ConnectionString = Conexión.Cn;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Reserva";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(DtResultado);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-                DtResultado = null;
-            }
-            return DtResultado;
+            get;set;
         }
 
         public  bool insertarReserva(int idCliente, int idEmpleado, String formaPago, String divisa, String estado)
@@ -246,14 +177,13 @@ namespace SistemaHotel.Modelo
             }
             finally
             {
-                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+                if (SqlCon.State ==  ConnectionState.Open) SqlCon.Close();
             }
             return insercionSatifactoria;
         }
 
         public int get_idReserva()
         {
-
             DataTable DtResultado = new DataTable("reserva");
             SqlConnection SqlCon = new SqlConnection();
             DataRow dr;
@@ -295,11 +225,7 @@ namespace SistemaHotel.Modelo
                 SqlCmd.CommandText = "Mostrar_Huesped_Reservado";
                 SqlCmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter id = new SqlParameter();
-                id.ParameterName = "@IdReserva";
-                id.SqlDbType = SqlDbType.Int;
-                id.Value = idReserva;
-                SqlCmd.Parameters.Add(id);
+                SqlCmd.Parameters.Add(new SqlParameter("@IdReserva",idReserva));
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
@@ -399,6 +325,31 @@ namespace SistemaHotel.Modelo
 
                 SqlCmd.Parameters.Add(c);
                 SqlCmd.Parameters.Add(c2);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            return DtResultado;
+        }
+
+
+        public DataTable MostrarReservas ()
+        {
+            DataTable DtResultado = new DataTable("Reserva");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexión.Cn;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "MostrarReservas";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);

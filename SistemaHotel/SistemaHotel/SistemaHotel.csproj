@@ -123,6 +123,12 @@
     <Compile Include="Vista\FrmBuscarReserva.Designer.cs">
       <DependentUpon>FrmBuscarReserva.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FrmHabitación.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\FrmHabitación.Designer.cs">
+      <DependentUpon>FrmHabitación.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FrmReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmBuscarReserva.resx">
       <DependentUpon>FrmBuscarReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FrmHabitación.resx">
+      <DependentUpon>FrmHabitación.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\FrmReserva.resx">
       <DependentUpon>FrmReserva.cs</DependentUpon>

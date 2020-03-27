@@ -86,13 +86,15 @@ namespace SistemaHotel.Vista {
                validar(txt_Dirección, "Dirección") ||
                validar(txt_Teléfono, "Teléfono")){
                 MessageBox.Show("Verifique bien los campos");
-            } else if (Controlador.NCliente.Insertar(txt_PrimerNombre.Text, txt_SegundoNombre.Text, txt_PrimerApellido.Text, txt_SegundoApellido.Text, txt_Dirección.Text, txt_Teléfono.Text, txt_Correo.Text)){
+            }
+            else if (Controlador.NCliente.Insertar(txt_PrimerNombre.Text, txt_SegundoNombre.Text, txt_PrimerApellido.Text, txt_SegundoApellido.Text, txt_Dirección.Text, txt_Teléfono.Text, txt_Correo.Text)){
                 FrmReserva frmreserva = new FrmReserva(NCliente.get_idCliente(), id_empleado, no_habitación, FechaEntrada, FechaSalida);
                 MessageBox.Show("Guardado exitosamente");
                 frmreserva.Show();
                 this.limpiar();
             }
-            else{
+            else
+            {
                 MessageBox.Show("Hubo un error");
             }
         }
@@ -121,14 +123,17 @@ namespace SistemaHotel.Vista {
         }
 
 
-        private void switch_habilitar_Click(object sender, EventArgs e) {
-            if (NCliente.habilitar(Id)) {
+        private void switch_habilitar_Click(object sender, EventArgs e)
+        {
+            if (NCliente.habilitar(Id))
+            {
                 this.tabla_cliente.DataSource = Controlador.NCliente.Mostrar();
             }
         }
 
 
-        public void press() {
+        public void press()
+        {
             Id=Convert.ToInt32(this.tabla_cliente.CurrentRow.Cells["id_cliente"].Value);
             this.txt_PrimerNombre.Text = Convert.ToString(this.tabla_cliente.CurrentRow.Cells["Primer Nombre"].Value);
             this.txt_SegundoNombre.Text = Convert.ToString(this.tabla_cliente.CurrentRow.Cells["Segundo Nombre"].Value);

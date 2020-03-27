@@ -382,13 +382,6 @@ select
    inner join huesped_hab_reserva hhr on hhr.id_huesped=h.id_huesped
    inner join habitacion_reserva hr on hr.id_reserva=@IdReserva
 go
-------------------------------------------------
-
-Create procedure [dbo].[Mostrar_Reserva]
-  as
-select * from reserva
-go
-
 ------------------------------------------------------
 
 Create procedure [dbo].[Rol_Usuario]
@@ -475,3 +468,23 @@ select * from Usuario
 insert into Usuario values('Luis','1234','Admin',1)
 
 update Usuario set rol = 'Administrador' where IdUsuario = 1
+
+execute Mostrar_Huesped_Reservado 1
+
+
+select * from Reserva
+go
+
+
+create procedure MostrarReservas
+as
+select 
+	id_reserva,
+	Id_cliente,
+	fecha_reserva,
+	forma_pago,
+	divisa,
+	stat from Reserva
+go
+
+MostrarReservas

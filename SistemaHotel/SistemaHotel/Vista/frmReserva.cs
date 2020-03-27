@@ -38,7 +38,7 @@ namespace SistemaHotel.Vista
         {
             data_cliente.DataSource = NCliente.Mostrar();
             data_reserva.DataSource = NReserva.MostrarReservas();
-           // this.lista_huesped.DataSource = getData();
+            
         }
 
         public void Activar(){
@@ -99,24 +99,16 @@ namespace SistemaHotel.Vista
             fm.Show();
         }
 
-        private void btn_editar_Click(object sender, EventArgs e)
+        private void btn_editar_Click (object sender, EventArgs e)
         {
 
         }
 
-        public DataTable getData() {
-            DataTable dtclientes = new DataTable();
-            string Cn = Modelo.Conexión.Cn;
-            using (SqlConnection con = new SqlConnection(Cn))
-            {
-                using (SqlDataAdapter adapter = new SqlDataAdapter("Mostrar_Huesped_Reservado", con))
-                {
-                    con.Open();
-                    adapter.Fill(dtclientes);   
-                }
-            }
-            return dtclientes;
-        }
+        private void data_reserva_CellClick (object sender, DataGridViewCellEventArgs e)
+        {
+            int IdReserva = e.RowIndex;
 
+        }
     }
 }
+     

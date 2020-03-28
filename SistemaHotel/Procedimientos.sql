@@ -222,8 +222,6 @@ go
 
  ----------------------------------------------------------
 
- select * from Reserva
-
  Create procedure [dbo].[Insertar_Empleado]
  @primernombre varchar(15),
  @segundonombre varchar(15),
@@ -328,7 +326,7 @@ go
 ------------------------------------------------------------
 
 
-Create procedure [dbo].[Mostrar_Habitación]
+Create procedure [dbo].[Mostrar_Habitación]  11
 @IdTipoHabitación int
    as
 select 
@@ -341,7 +339,7 @@ select
   th.precio 
   from habitacion h
   inner join tipo_habitacion th on th.cod_tipo=h.cod_tipo
-  where th.cod_tipo=@IdTipoHabitación
+  where th.cod_tipo = @IdTipoHabitación
  go
 
   ----------------------------------------------------------
@@ -367,7 +365,7 @@ select * from huesped
 go
 --------------------------------------------------
 
-Create procedure Mostrar_Huesped_Reservado 1
+Create procedure Mostrar_Huesped_Reservado
 @IdReserva int
   as
 select 

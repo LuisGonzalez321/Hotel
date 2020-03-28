@@ -30,23 +30,23 @@ namespace SistemaHotel.Vista
         /// </summary>
         private void InitializeComponent ()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHabitación));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.date_FechaSalida = new Bunifu.Framework.UI.BunifuDatepicker();
             this.date_fechaEntrada = new Bunifu.Framework.UI.BunifuDatepicker();
             this.combox_idHab = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuSeparator3 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.tabla_habitación = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.image_hab = new System.Windows.Forms.PictureBox();
             this.combox_hab = new Bunifu.Framework.UI.BunifuDropdown();
             this.switch_habilitar = new Bunifu.Framework.UI.BunifuSwitch();
@@ -58,8 +58,9 @@ namespace SistemaHotel.Vista
             this.label5 = new System.Windows.Forms.Label();
             this.btn_reservar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_buscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_habitación)).BeginInit();
+            this.tabla_habitación = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.image_hab)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_habitación)).BeginInit();
             this.SuspendLayout();
             // 
             // date_FechaSalida
@@ -137,48 +138,6 @@ namespace SistemaHotel.Vista
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
             // 
-            // tabla_habitación
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabla_habitación.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.tabla_habitación.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.tabla_habitación.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabla_habitación.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_habitación.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.tabla_habitación.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabla_habitación.DefaultCellStyle = dataGridViewCellStyle7;
-            this.tabla_habitación.DoubleBuffered = true;
-            this.tabla_habitación.EnableHeadersVisualStyles = false;
-            this.tabla_habitación.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.tabla_habitación.HeaderForeColor = System.Drawing.Color.White;
-            this.tabla_habitación.Location = new System.Drawing.Point(5, 294);
-            this.tabla_habitación.Name = "tabla_habitación";
-            this.tabla_habitación.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabla_habitación.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.tabla_habitación.Size = new System.Drawing.Size(768, 251);
-            this.tabla_habitación.TabIndex = 16;
-            // 
             // image_hab
             // 
             this.image_hab.Image = global::SistemaHotel.Properties.Resources.habitación_básica1;
@@ -215,7 +174,7 @@ namespace SistemaHotel.Vista
             this.switch_habilitar.BorderRadius = 0;
             this.switch_habilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switch_habilitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.switch_habilitar.Location = new System.Drawing.Point(355, 244);
+            this.switch_habilitar.Location = new System.Drawing.Point(355, 253);
             this.switch_habilitar.Name = "switch_habilitar";
             this.switch_habilitar.Oncolor = System.Drawing.Color.Purple;
             this.switch_habilitar.Onoffcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -311,11 +270,11 @@ namespace SistemaHotel.Vista
             this.btn_reservar.ColorContrastOnClick = 45;
             this.btn_reservar.ColorContrastOnHover = 45;
             this.btn_reservar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btn_reservar.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_reservar.CustomizableEdges = borderEdges1;
             this.btn_reservar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_reservar.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_reservar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -336,29 +295,30 @@ namespace SistemaHotel.Vista
             this.btn_reservar.IndicateFocus = false;
             this.btn_reservar.Location = new System.Drawing.Point(493, 237);
             this.btn_reservar.Name = "btn_reservar";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties5.BorderRadius = 3;
-            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties5.BorderThickness = 1;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.btn_reservar.onHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties6.BorderRadius = 3;
-            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties6.BorderThickness = 1;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties6.ForeColor = System.Drawing.Color.White;
-            stateProperties6.IconLeftImage = null;
-            stateProperties6.IconRightImage = null;
-            this.btn_reservar.OnPressedState = stateProperties6;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties1.BorderRadius = 3;
+            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties1.ForeColor = System.Drawing.Color.White;
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btn_reservar.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties2.BorderRadius = 3;
+            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties2.ForeColor = System.Drawing.Color.White;
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btn_reservar.OnPressedState = stateProperties2;
             this.btn_reservar.Size = new System.Drawing.Size(116, 38);
             this.btn_reservar.TabIndex = 70;
             this.btn_reservar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_reservar.TextMarginLeft = 0;
             this.btn_reservar.UseDefaultRadiusAndThickness = true;
+            this.btn_reservar.Click += new System.EventHandler(this.btn_reservar_Click);
             // 
             // btn_buscar
             // 
@@ -374,11 +334,11 @@ namespace SistemaHotel.Vista
             this.btn_buscar.ColorContrastOnClick = 45;
             this.btn_buscar.ColorContrastOnHover = 45;
             this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btn_buscar.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btn_buscar.CustomizableEdges = borderEdges2;
             this.btn_buscar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_buscar.DisabledBorderColor = System.Drawing.Color.Empty;
             this.btn_buscar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -399,24 +359,24 @@ namespace SistemaHotel.Vista
             this.btn_buscar.IndicateFocus = false;
             this.btn_buscar.Location = new System.Drawing.Point(615, 237);
             this.btn_buscar.Name = "btn_buscar";
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties7.BorderRadius = 3;
-            stateProperties7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties7.BorderThickness = 1;
-            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties7.ForeColor = System.Drawing.Color.White;
-            stateProperties7.IconLeftImage = null;
-            stateProperties7.IconRightImage = null;
-            this.btn_buscar.onHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties8.BorderRadius = 3;
-            stateProperties8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties8.BorderThickness = 1;
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
-            stateProperties8.ForeColor = System.Drawing.Color.White;
-            stateProperties8.IconLeftImage = null;
-            stateProperties8.IconRightImage = null;
-            this.btn_buscar.OnPressedState = stateProperties8;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties3.BorderRadius = 3;
+            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties3.ForeColor = System.Drawing.Color.White;
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btn_buscar.onHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties4.BorderRadius = 3;
+            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.btn_buscar.OnPressedState = stateProperties4;
             this.btn_buscar.Size = new System.Drawing.Size(116, 39);
             this.btn_buscar.TabIndex = 71;
             this.btn_buscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -424,12 +384,70 @@ namespace SistemaHotel.Vista
             this.btn_buscar.UseDefaultRadiusAndThickness = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
+            // tabla_habitación
+            // 
+            this.tabla_habitación.AllowUserToAddRows = false;
+            this.tabla_habitación.AllowUserToDeleteRows = false;
+            this.tabla_habitación.AllowUserToResizeColumns = false;
+            this.tabla_habitación.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.tabla_habitación.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tabla_habitación.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.tabla_habitación.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tabla_habitación.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(3)))), ((int)(((byte)(61)))));
+            this.tabla_habitación.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabla_habitación.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tabla_habitación.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.tabla_habitación.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tabla_habitación.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(21, 10, 21, 10);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_habitación.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tabla_habitación.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabla_habitación.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.tabla_habitación.Location = new System.Drawing.Point(0, 291);
+            this.tabla_habitación.Margin = new System.Windows.Forms.Padding(10);
+            this.tabla_habitación.Name = "tabla_habitación";
+            this.tabla_habitación.ReadOnly = true;
+            this.tabla_habitación.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_habitación.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.tabla_habitación.RowHeadersVisible = false;
+            this.tabla_habitación.RowHeadersWidth = 10;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.tabla_habitación.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.tabla_habitación.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_habitación.RowTemplate.Height = 30;
+            this.tabla_habitación.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tabla_habitación.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_habitación.Size = new System.Drawing.Size(776, 257);
+            this.tabla_habitación.TabIndex = 72;
+            // 
             // FrmHabitación
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemaHotel.Properties.Resources.Fondo_Menu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.tabla_habitación);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_reservar);
             this.Controls.Add(this.label5);
@@ -444,13 +462,12 @@ namespace SistemaHotel.Vista
             this.Controls.Add(this.combox_idHab);
             this.Controls.Add(this.bunifuSeparator3);
             this.Controls.Add(this.bunifuSeparator2);
-            this.Controls.Add(this.tabla_habitación);
             this.Controls.Add(this.image_hab);
             this.Controls.Add(this.combox_hab);
             this.Name = "FrmHabitación";
             this.Size = new System.Drawing.Size(776, 548);
-            ((System.ComponentModel.ISupportInitialize)(this.tabla_habitación)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.image_hab)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabla_habitación)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,7 +479,6 @@ namespace SistemaHotel.Vista
         private Bunifu.Framework.UI.BunifuDropdown combox_idHab;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator3;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid tabla_habitación;
         private System.Windows.Forms.PictureBox image_hab;
         private Bunifu.Framework.UI.BunifuDropdown combox_hab;
         private Bunifu.Framework.UI.BunifuSwitch switch_habilitar;
@@ -474,5 +490,13 @@ namespace SistemaHotel.Vista
         private System.Windows.Forms.Label label5;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_reservar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_buscar;
+        private System.Windows.Forms.DataGridView tabla_habitación;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nohabitacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codtipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomtipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }

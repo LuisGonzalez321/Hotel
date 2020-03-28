@@ -65,14 +65,14 @@ namespace SistemaHotel.Vista
 
         private void btn_reservar_Click (object sender, EventArgs e)
         {
-            FrmCliente frmcliente = new FrmCliente(Convert.ToInt32(combox_idHab.selectedValue), id_empleado, this.date_fechaEntrada.Value, this.date_FechaSalida.Value);
+           // FrmCliente frmcliente = new FrmCliente(Convert.ToInt32(combox_idHab.selectedValue), id_empleado, this.date_fechaEntrada.Value, this.date_FechaSalida.Value);
         }
 
         private void btn_buscar_Click (object sender, EventArgs e)
         {
             DateTime fechaEntrada = this.date_fechaEntrada.Value;
             DateTime fechaSalida = this.date_FechaSalida.Value;
-            if (switch_habilitar.Value == false)
+            if (switch_habilitar.Value == true)
             {
                 int id = Convert.ToInt32(combox_idHab.selectedValue);
                 tabla_habitación.DataSource = Controlador.NHabitación.Disponibilidad_Habitación(id, fechaEntrada, fechaSalida);

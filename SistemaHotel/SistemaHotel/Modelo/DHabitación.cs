@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaHotel.Modelo {
-    class DHabitación {
+    class DHabitación
+    {
         private int no_habitacion;
         private int cod_tipo;
         private string descripción;
@@ -34,60 +35,63 @@ namespace SistemaHotel.Modelo {
 
         public DHabitación(){}
 
-        public int No_habitacion{
-            get{return no_habitacion;}
-            set{no_habitacion = value;}
+        public int No_habitacion
+        {
+            get;set;
         }
-        public int Cod_tipo{
-            get{return cod_tipo;}
-            set{cod_tipo = value;}
+        public int Cod_tipo
+        {
+            get;set;
         }
-        public string Descripción{
-            get{return descripción;}
-            set{descripción = value;}
+        public string Descripción
+        {
+            get;set;
         }
-        public int Cap{
-            get{return capacidad;}
-            set{capacidad = value;
-            }
-        }
-
-        public string Estado{
-            get { return estado; }
-            set { estado = value; }
-        }
-        public string Nom_tipo{
-            get{return nom_tipo;}
-            set{nom_tipo = value;}
+        public int Cap
+        {
+            get;set;
         }
 
-        public float Precio{
-            get{return precio;}
-            set{precio = value;}
+        public string Estado
+        {
+            get;set;
+        }
+        public string Nom_tipo
+        {
+            get;set;
         }
 
-        public DataTable Mostrar() {
+        public float Precio
+        {
+            get;set;
+        }
+
+        public DataTable Mostrar()
+        {
             DataTable DtResultado = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
-            try {
+            try
+            {
                 SqlCon.ConnectionString = Conexión.Cn;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Habitaciones";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(DtResultado);
-
-            } catch (Exception ex) {
+                new SqlDataAdapter(new SqlCommand("Mostrar_Habitaciones", SqlCon)).Fill(DtResultado);
+            } catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
                 DtResultado = null;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                {
+                    SqlCon.Close();
+                }
             }
             return DtResultado;
 
         }
 
-        public DataTable mostrar_idHabitacion() {
+        public DataTable mostrar_idHabitacion()
+        {
             //conectar con la base de datos para extraer el hater segun el manufacturing order que le corresponda
             SqlConnection SqlCon = new SqlConnection();
             DataTable dt = new DataTable();

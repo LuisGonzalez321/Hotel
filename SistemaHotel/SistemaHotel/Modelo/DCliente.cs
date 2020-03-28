@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaHotel.Modelo {
-    class DCliente {
+    class DCliente
+    {
         // Variables de Clase
         private string p_nombre;
         private string s_nombre;
@@ -54,7 +55,8 @@ namespace SistemaHotel.Modelo {
         {
             get;set;
         }
-        public DCliente(string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string correo, string estado) {
+        public DCliente(string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string correo, string estado)
+        {
             this.p_nombre = p_nombre;
             this.s_nombre = s_nombre;
             this.p_apellido = p_apellido;
@@ -66,10 +68,12 @@ namespace SistemaHotel.Modelo {
         }
         public DCliente() { }
 
-        public bool Insertar(DCliente cliente) {
+        public bool Insertar(DCliente cliente)
+        {
             bool state;
             SqlConnection SqlCon = new SqlConnection();
-            try {
+            try
+            {
                 //Código
                 SqlCon.ConnectionString = Conexión.Cn;
                 SqlCon.Open();
@@ -134,19 +138,25 @@ namespace SistemaHotel.Modelo {
                 SqlCmd.ExecuteNonQuery();// == 1 ? "OK" : "NO se Ingreso el Registro";
 
                 state = true;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
                 state= false;
-            } finally {
+            }
+            finally
+            {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return state;
         }
 
         //Método Editar
-        public bool Editar(DCliente Cliente) {
+        public bool Editar(DCliente Cliente)
+        {
             SqlConnection SqlCon = new SqlConnection();
-            try {
+            try
+            {
                 //Código
                 SqlCon.ConnectionString = Conexión.Cn;
                 SqlCon.Open();
@@ -212,10 +222,14 @@ namespace SistemaHotel.Modelo {
                 SqlCmd.Parameters.Add(ParCorreo);
                 //    //Ejecutamos nuestro comando
                 return true;
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
                 return false;
-            } finally {
+            }
+            finally
+            {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
@@ -229,25 +243,25 @@ namespace SistemaHotel.Modelo {
             {
                 SqlCon.ConnectionString = Conexión.Cn;
                 new SqlDataAdapter(new SqlCommand("Mostrar_Clientes", SqlCon)).Fill(DtResultado);
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
                 DtResultado = null;
             }
             finally
             {
-                if (SqlCon.State == ConnectionState.Open)
-                {
-                    SqlCon.Close();
-                }
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return DtResultado;
 
         }
-        public DataTable BuscarAsegurado(string dato) {
+        public DataTable BuscarAsegurado(string dato)
+        {
             DataTable DtResultado = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
-            try {
+            try
+            {
                 SqlCon.ConnectionString = Conexión.Cn;
                 SqlCommand SqlCmd = new SqlCommand();
                 SqlCmd.Connection = SqlCon;
@@ -264,19 +278,27 @@ namespace SistemaHotel.Modelo {
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
 
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.ToString());
                 DtResultado = null;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return DtResultado;
 
         }
 
 
-        public bool habilitar (int Id_cliente) {
+        public bool habilitar (int Id_cliente)
+        {
             bool stat;
             SqlConnection SqlCon = new SqlConnection();
-            try {
+            try
+            {
                 //Código
                 SqlCon.ConnectionString = Conexión.Cn;
                 SqlCon.Open();
@@ -285,18 +307,16 @@ namespace SistemaHotel.Modelo {
 
                 //Ejecutamos nuestro comando
                 SqlCmd.ExecuteNonQuery();
-
                 stat = true;
-            } catch (Exception on) {
+            }
+            catch (Exception on)
+            {
                 stat = false;
                 MessageBox.Show(on.Message);
             }
             finally
             {
-                if (SqlCon.State == ConnectionState.Open)
-                {
-                    SqlCon.Close();
-                }
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return stat;
         }
@@ -310,14 +330,14 @@ namespace SistemaHotel.Modelo {
             try
             {
                 SqlCon.ConnectionString = Conexión.Cn;
-                SqlCommand SqlCmd = new SqlCommand("get_idCliente",SqlCon);
+                SqlCommand SqlCmd = new SqlCommand("get_idCliente", SqlCon);
 
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
                 if (DtResultado.Rows.Count > 0)
                 {
-                    dr = DtResultado.Rows[0];
-                    return Convert.ToInt32(dr["id_cliente"].ToString());
+                    dr = DtResultado.Rows [0];
+                    return Convert.ToInt32(dr ["id_cliente"].ToString());
                 }
                 return 0;
             }
@@ -326,7 +346,35 @@ namespace SistemaHotel.Modelo {
                 MessageBox.Show(ex.ToString());
                 return 0;
             }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
         }
+
+
+        public DataTable MostrarClientesParaReservas ()
+        {
+            DataTable DtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexión.Cn;
+                new SqlDataAdapter(new SqlCommand("MostrarClientesReservas", SqlCon)).Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+            return DtResultado;
+        }
+
 
     }
 }

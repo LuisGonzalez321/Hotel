@@ -51,7 +51,6 @@ namespace SistemaHotel.Vista
             this.combox_hab = new Bunifu.Framework.UI.BunifuDropdown();
             this.switch_habilitar = new Bunifu.Framework.UI.BunifuSwitch();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@ namespace SistemaHotel.Vista
             this.btn_reservar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_buscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.tabla_habitación = new System.Windows.Forms.DataGridView();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.image_hab)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabla_habitación)).BeginInit();
             this.SuspendLayout();
@@ -70,7 +70,7 @@ namespace SistemaHotel.Vista
             this.date_FechaSalida.ForeColor = System.Drawing.Color.White;
             this.date_FechaSalida.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_FechaSalida.FormatCustom = null;
-            this.date_FechaSalida.Location = new System.Drawing.Point(493, 181);
+            this.date_FechaSalida.Location = new System.Drawing.Point(489, 184);
             this.date_FechaSalida.Name = "date_FechaSalida";
             this.date_FechaSalida.Size = new System.Drawing.Size(238, 36);
             this.date_FechaSalida.TabIndex = 21;
@@ -83,7 +83,7 @@ namespace SistemaHotel.Vista
             this.date_fechaEntrada.ForeColor = System.Drawing.Color.White;
             this.date_fechaEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_fechaEntrada.FormatCustom = null;
-            this.date_fechaEntrada.Location = new System.Drawing.Point(493, 120);
+            this.date_fechaEntrada.Location = new System.Drawing.Point(489, 123);
             this.date_fechaEntrada.Name = "date_fechaEntrada";
             this.date_fechaEntrada.Size = new System.Drawing.Size(238, 36);
             this.date_fechaEntrada.TabIndex = 20;
@@ -106,12 +106,12 @@ namespace SistemaHotel.Vista
         "8",
         "9",
         "10"};
-            this.combox_idHab.Location = new System.Drawing.Point(493, 60);
+            this.combox_idHab.Location = new System.Drawing.Point(489, 68);
             this.combox_idHab.Name = "combox_idHab";
             this.combox_idHab.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.combox_idHab.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(40)))), ((int)(((byte)(140)))));
             this.combox_idHab.selectedIndex = 0;
-            this.combox_idHab.Size = new System.Drawing.Size(238, 38);
+            this.combox_idHab.Size = new System.Drawing.Size(238, 29);
             this.combox_idHab.TabIndex = 19;
             // 
             // bunifuSeparator3
@@ -119,7 +119,7 @@ namespace SistemaHotel.Vista
             this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator3.LineThickness = 1;
-            this.bunifuSeparator3.Location = new System.Drawing.Point(326, 43);
+            this.bunifuSeparator3.Location = new System.Drawing.Point(322, 46);
             this.bunifuSeparator3.Name = "bunifuSeparator3";
             this.bunifuSeparator3.Size = new System.Drawing.Size(23, 233);
             this.bunifuSeparator3.TabIndex = 18;
@@ -131,7 +131,7 @@ namespace SistemaHotel.Vista
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(5, 278);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(3, 28);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
             this.bunifuSeparator2.Size = new System.Drawing.Size(752, 10);
             this.bunifuSeparator2.TabIndex = 17;
@@ -141,7 +141,7 @@ namespace SistemaHotel.Vista
             // image_hab
             // 
             this.image_hab.Image = global::SistemaHotel.Properties.Resources.habitación_básica1;
-            this.image_hab.Location = new System.Drawing.Point(5, 85);
+            this.image_hab.Location = new System.Drawing.Point(1, 88);
             this.image_hab.Name = "image_hab";
             this.image_hab.Size = new System.Drawing.Size(315, 191);
             this.image_hab.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,7 +159,7 @@ namespace SistemaHotel.Vista
         "Basica",
         "Ejecutiva",
         "Presidencial"};
-            this.combox_hab.Location = new System.Drawing.Point(146, 41);
+            this.combox_hab.Location = new System.Drawing.Point(142, 44);
             this.combox_hab.Name = "combox_hab";
             this.combox_hab.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.combox_hab.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(40)))), ((int)(((byte)(140)))));
@@ -174,7 +174,7 @@ namespace SistemaHotel.Vista
             this.switch_habilitar.BorderRadius = 0;
             this.switch_habilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switch_habilitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.switch_habilitar.Location = new System.Drawing.Point(355, 253);
+            this.switch_habilitar.Location = new System.Drawing.Point(351, 256);
             this.switch_habilitar.Name = "switch_habilitar";
             this.switch_habilitar.Oncolor = System.Drawing.Color.Purple;
             this.switch_habilitar.Onoffcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -196,25 +196,13 @@ namespace SistemaHotel.Vista
             this.label1.TabIndex = 65;
             this.label1.Text = "DISPONIBILIDAD DE HABITACIONES";
             // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(5, 28);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(752, 10);
-            this.bunifuSeparator1.TabIndex = 64;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(6, 51);
+            this.label2.Location = new System.Drawing.Point(2, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 20);
             this.label2.TabIndex = 66;
@@ -226,7 +214,7 @@ namespace SistemaHotel.Vista
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label3.Location = new System.Drawing.Point(351, 69);
+            this.label3.Location = new System.Drawing.Point(347, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 67;
@@ -238,7 +226,7 @@ namespace SistemaHotel.Vista
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label4.Location = new System.Drawing.Point(351, 189);
+            this.label4.Location = new System.Drawing.Point(347, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 20);
             this.label4.TabIndex = 68;
@@ -250,7 +238,7 @@ namespace SistemaHotel.Vista
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(351, 128);
+            this.label5.Location = new System.Drawing.Point(347, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 20);
             this.label5.TabIndex = 69;
@@ -280,7 +268,7 @@ namespace SistemaHotel.Vista
             this.btn_reservar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_reservar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btn_reservar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_reservar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.btn_reservar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reservar.ForeColor = System.Drawing.Color.White;
             this.btn_reservar.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btn_reservar.IconMarginLeft = 11;
@@ -290,10 +278,10 @@ namespace SistemaHotel.Vista
             this.btn_reservar.IdleBorderRadius = 3;
             this.btn_reservar.IdleBorderThickness = 1;
             this.btn_reservar.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
-            this.btn_reservar.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btn_reservar.IdleIconLeftImage")));
+            this.btn_reservar.IdleIconLeftImage = null;
             this.btn_reservar.IdleIconRightImage = null;
             this.btn_reservar.IndicateFocus = false;
-            this.btn_reservar.Location = new System.Drawing.Point(493, 237);
+            this.btn_reservar.Location = new System.Drawing.Point(489, 240);
             this.btn_reservar.Name = "btn_reservar";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
             stateProperties1.BorderRadius = 3;
@@ -344,7 +332,7 @@ namespace SistemaHotel.Vista
             this.btn_buscar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btn_buscar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btn_buscar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_buscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.btn_buscar.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_buscar.ForeColor = System.Drawing.Color.White;
             this.btn_buscar.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btn_buscar.IconMarginLeft = 11;
@@ -357,7 +345,7 @@ namespace SistemaHotel.Vista
             this.btn_buscar.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.IdleIconLeftImage")));
             this.btn_buscar.IdleIconRightImage = null;
             this.btn_buscar.IndicateFocus = false;
-            this.btn_buscar.Location = new System.Drawing.Point(615, 237);
+            this.btn_buscar.Location = new System.Drawing.Point(611, 240);
             this.btn_buscar.Name = "btn_buscar";
             stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(57)))), ((int)(((byte)(185)))));
             stateProperties3.BorderRadius = 3;
@@ -417,7 +405,7 @@ namespace SistemaHotel.Vista
             this.tabla_habitación.DefaultCellStyle = dataGridViewCellStyle3;
             this.tabla_habitación.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabla_habitación.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.tabla_habitación.Location = new System.Drawing.Point(0, 291);
+            this.tabla_habitación.Location = new System.Drawing.Point(0, 301);
             this.tabla_habitación.Margin = new System.Windows.Forms.Padding(10);
             this.tabla_habitación.Name = "tabla_habitación";
             this.tabla_habitación.ReadOnly = true;
@@ -438,8 +426,20 @@ namespace SistemaHotel.Vista
             this.tabla_habitación.RowTemplate.Height = 30;
             this.tabla_habitación.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tabla_habitación.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tabla_habitación.Size = new System.Drawing.Size(776, 257);
+            this.tabla_habitación.Size = new System.Drawing.Size(776, 247);
             this.tabla_habitación.TabIndex = 72;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(1, 278);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(752, 10);
+            this.bunifuSeparator1.TabIndex = 75;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
             // 
             // FrmHabitación
             // 
@@ -447,6 +447,7 @@ namespace SistemaHotel.Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SistemaHotel.Properties.Resources.Fondo_Menu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.tabla_habitación);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.btn_reservar);
@@ -455,7 +456,6 @@ namespace SistemaHotel.Vista
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.switch_habilitar);
             this.Controls.Add(this.date_FechaSalida);
             this.Controls.Add(this.date_fechaEntrada);
@@ -483,7 +483,6 @@ namespace SistemaHotel.Vista
         private Bunifu.Framework.UI.BunifuDropdown combox_hab;
         private Bunifu.Framework.UI.BunifuSwitch switch_habilitar;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -491,12 +490,6 @@ namespace SistemaHotel.Vista
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_reservar;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_buscar;
         private System.Windows.Forms.DataGridView tabla_habitación;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nohabitacionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codtipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn capDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomtipoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
     }
 }

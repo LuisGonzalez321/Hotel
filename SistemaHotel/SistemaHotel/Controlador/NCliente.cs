@@ -51,5 +51,11 @@ namespace SistemaHotel.Controlador {
         {
             return new DCliente().get_idCliente();
         }
+
+        public static DataTable MostrarClientesParaReservas ()
+        {
+            return new DCliente().MostrarClientesParaReservas();
+        }
+
     }
 }

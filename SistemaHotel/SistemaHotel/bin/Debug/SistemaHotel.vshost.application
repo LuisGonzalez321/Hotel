@@ -7,14 +7,14 @@
     <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SistemaHotel.exe.manifest" size="7549">
+    <dependentAssembly dependencyType="install" codebase="SistemaHotel.exe.manifest" size="9712">
       <assemblyIdentity name="SistemaHotel.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3Vyr3UxKmTCA7V1+v/yIf0AwUhDtqpZiEG/Qfvrfqpc=</dsig:DigestValue>
+        <dsig:DigestValue>zbs+hfmm5tCEKCRityo+8hTvF7WEDtlzaTsmEhWqmUY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

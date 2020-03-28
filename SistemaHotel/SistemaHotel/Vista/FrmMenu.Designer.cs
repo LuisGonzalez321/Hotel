@@ -37,7 +37,7 @@ namespace SistemaHotel.Vista {
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.btn_home = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.lbl_menu = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel_bottom = new System.Windows.Forms.Panel();
             this.btn_menu = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_salir = new Bunifu.Framework.UI.BunifuImageButton();
@@ -396,16 +396,16 @@ namespace SistemaHotel.Vista {
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // bunifuCustomLabel1
+            // lbl_menu
             // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(255, 12);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(131, 25);
-            this.bunifuCustomLabel1.TabIndex = 2;
-            this.bunifuCustomLabel1.Text = "Sistema Hotel";
+            this.lbl_menu.AutoSize = true;
+            this.lbl_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbl_menu.Location = new System.Drawing.Point(255, 12);
+            this.lbl_menu.Name = "lbl_menu";
+            this.lbl_menu.Size = new System.Drawing.Size(131, 25);
+            this.lbl_menu.TabIndex = 2;
+            this.lbl_menu.Text = "Sistema Hotel";
             // 
             // panel_bottom
             // 
@@ -453,7 +453,7 @@ namespace SistemaHotel.Vista {
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(990, 626);
             this.Controls.Add(this.btn_salir);
-            this.Controls.Add(this.bunifuCustomLabel1);
+            this.Controls.Add(this.lbl_menu);
             this.Controls.Add(this.panel_bottom);
             this.Controls.Add(this.btn_menu);
             this.Controls.Add(this.panel_menu);
@@ -478,7 +478,7 @@ namespace SistemaHotel.Vista {
         private System.Windows.Forms.Panel panel_menu;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_home;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel lbl_menu;
         private Bunifu.Framework.UI.BunifuImageButton btn_salir;
         private Bunifu.Framework.UI.BunifuImageButton btn_menu;
         private System.Windows.Forms.Panel panel_bottom;

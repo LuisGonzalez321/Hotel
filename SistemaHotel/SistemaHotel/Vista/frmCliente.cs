@@ -14,23 +14,10 @@ namespace SistemaHotel.Vista {
     {
 
         private int IdCliente;
-        public int id_empleado;
-        public int no_habitación;
-        public DateTime FechaEntrada;
-        public DateTime FechaSalida;
 
         public FrmCliente ()
         {
             InitializeComponent();
-        }
-
-        public FrmCliente (int id_empleado, int no_habitación, DateTime FechaEntrada, DateTime FechaSalida)
-        {
-            InitializeComponent();
-            this.id_empleado = id_empleado;
-            this.no_habitación = no_habitación;
-            this.FechaEntrada = FechaEntrada;
-            this.FechaSalida = FechaSalida;
         }
 
         private void UserControl1_Load (object sender, EventArgs e)
@@ -44,7 +31,7 @@ namespace SistemaHotel.Vista {
             this.tabla_cliente.DataSource = Controlador.NCliente.Mostrar();
         }
 
-        public void HabilitaBotones(bool nuevo,bool editar) {
+        public void HabilitaBotones(bool nuevo, bool editar) {
             if (nuevo)
             {
                 //Botones
@@ -80,21 +67,21 @@ namespace SistemaHotel.Vista {
             }
         }
 
-        public bool ValidarTextBox(Bunifu.Framework.UI.BunifuMaterialTextbox textbox,string texto)
+        public bool ValidarTextBox(Bunifu.Framework.UI.BunifuMaterialTextbox textbox)
         {
-            return (textbox.Text == texto) ? true : false;
+            return (textbox.Text.Length == 0);
         }
 
         private void GuardarDatos()
         {
             //Controlador.NCliente.Insertar(txt_PrimerNombre.Text, txt_SegundoNombre.Text, txt_PrimerApellido.Text, txt_SegundoApellido.Text, txt_Dirección.Text, txt_Teléfono.Text, txt_Correo.Text)
-            if (ValidarTextBox(txt_PrimerNombre, "Primer Nombre") ||
-                ValidarTextBox(txt_SegundoNombre, "Segundo Nombre") ||
-                ValidarTextBox(txt_PrimerApellido, "Primer Apellido") ||
-                ValidarTextBox(txt_SegundoApellido, "Segundo Apellido") ||
-                ValidarTextBox(txt_Correo, "Correo") ||
-                ValidarTextBox(txt_Dirección, "Dirección") ||
-                ValidarTextBox(txt_Teléfono, "Teléfono"))
+            if (ValidarTextBox(txt_PrimerNombre) ||
+                ValidarTextBox(txt_SegundoNombre) ||
+                ValidarTextBox(txt_PrimerApellido) ||
+                ValidarTextBox(txt_SegundoApellido) ||
+                ValidarTextBox(txt_Correo) ||
+                ValidarTextBox(txt_Dirección) ||
+                ValidarTextBox(txt_Teléfono))
             {
                 MessageBox.Show("Verifique bien los campos");
             }
@@ -123,6 +110,7 @@ namespace SistemaHotel.Vista {
         private void btn_Cancelar_Click(object sender, EventArgs e)
         {
             HabilitaBotones(true,false);
+            limpiar();
         }
 
         private void limpiar()
@@ -188,99 +176,9 @@ namespace SistemaHotel.Vista {
 
         private void txt_Buscar_OnTextChange(object sender, EventArgs e)
         {
-          //  this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(this.txt_Buscar.Text.Trim());
+          this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(this.txt_Buscar.Text.Trim());
         }
-
-
-        private void txt_PrimerNombre_Enter(object sender, EventArgs e)
-        {
-            if (txt_PrimerNombre.Text== "Primer Nombre") txt_PrimerNombre.Text = "";
-        }
-
-        private void txt_PrimerNombre_Leave(object sender, EventArgs e)
-        {
-            if(txt_PrimerNombre.Text=="") txt_PrimerNombre.Text = "Primer Nombre";
-            
-        }
-
-        private void txt_SegundoNombre_Enter(object sender, EventArgs e)
-        {
-            if (txt_SegundoNombre.Text == "Segundo Nombre") txt_SegundoNombre.Text = "";
-            
-        }
-
-        private void txt_SegundoNombre_Leave(object sender, EventArgs e)
-        {
-            if (txt_SegundoNombre.Text == "") txt_SegundoNombre.Text = "Segundo Nombre";
-        }
-
-        private void txt_PrimerApellido_Enter(object sender, EventArgs e)
-        {
-            if (txt_PrimerApellido.Text == "Primer Apellido") txt_PrimerApellido.Text = "";
-            
-        }
-
-        private void txt_PrimerApellido_Leave(object sender, EventArgs e)
-        {
-            if (txt_PrimerApellido.Text == "") txt_PrimerApellido.Text = "Primer Apellido";
-            
-        }
-
-        private void txt_SegundoApellido_Enter(object sender, EventArgs e)
-        {
-            if (txt_SegundoApellido.Text == "Segundo Apellido") txt_SegundoApellido.Text = "";
-            
-        }
-
-        private void txt_SegundoApellido_Leave(object sender, EventArgs e)
-        {
-            if (txt_SegundoApellido.Text == "") txt_SegundoApellido.Text = "Segundo Apellido";
-            
-        }
-
-        private void txt_Dirección_Enter(object sender, EventArgs e)
-        {
-            if (txt_Dirección.Text == "Dirección") txt_Dirección.Text = "";
-            
-        }
-
-        private void txt_Dirección_Leave(object sender, EventArgs e)
-        {
-            if (txt_Dirección.Text == "") txt_Dirección.Text = "Dirección";
-            
-        }
-
-        private void txt_Correo_Enter(object sender, EventArgs e)
-        {
-            if (txt_Correo.Text == "Correo") txt_Correo.Text="";
-        }
-
-        private void txt_Correo_Leave(object sender, EventArgs e)
-        {
-            if (txt_Correo.Text == "") txt_Correo.Text = "Correo";
-        }
-
-        private void txt_Teléfono_Enter(object sender, EventArgs e)
-        {
-            if (txt_Teléfono.Text == "Teléfono") txt_Teléfono.Text = "";
-            
-        }
-
-        private void txt_Teléfono_Leave(object sender, EventArgs e)
-        {
-            if (txt_Teléfono.Text == "") txt_Teléfono.Text = "Teléfono";
-        }
-
-        //private void txt_Buscar_Enter(object sender, EventArgs e)
-        //{
-        //    if (txt_Buscar.text == "Busque un Cliente") txt_Buscar.text = "";
-        //}
-
-        //private void txt_Buscar_Leave(object sender, EventArgs e)
-        //{
-        //    if (txt_Buscar.text == "") txt_Buscar.text = "Busque un Cliente";
-        //}
-
+         
         private void txt_Teléfono_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controlador.Tools.soloNúmeros(e);
@@ -329,10 +227,6 @@ namespace SistemaHotel.Vista {
             if (e.KeyCode == Keys.Enter)  this.txt_Teléfono.Focus(); 
         }
 
-        private void txt_Teléfono_KeyDown(object sender, KeyEventArgs e){
-          
-        }
-
         private void txt_PrimerNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controlador.Tools.soloLetras(e);
@@ -351,21 +245,6 @@ namespace SistemaHotel.Vista {
         private void txt_SegundoApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
             Controlador.Tools.soloLetras(e);
-        }
-
-        private void txt_Dirección_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txt_Correo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-           
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(txt_Buscar.Text.Trim());
         }
 
 

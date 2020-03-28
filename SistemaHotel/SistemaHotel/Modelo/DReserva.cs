@@ -363,5 +363,27 @@ namespace SistemaHotel.Modelo
             return DtResultado;
         }
 
+        public DataTable MostrarReservasCliente (int IdCliente)
+        {
+            DataTable DtResultado = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexión.Cn;
+                new SqlDataAdapter(new SqlCommand("MostrarReservasCliente " + IdCliente, SqlCon)).Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                DtResultado = null;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open)
+                    SqlCon.Close();
+            }
+            return DtResultado;
+        }
+
     }
 }

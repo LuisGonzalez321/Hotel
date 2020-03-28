@@ -79,6 +79,42 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.UI.WinForms.BunifuDropdown.dll" size="52720">
+      <assemblyIdentity name="Bunifu.UI.WinForms.BunifuDropdown" version="1.11.5.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>5iqIh3UAGuhbXAVZy0ET4Qad1bN8vcZWagO0fpOktfw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.UI.WinForms.BunifuImageButton.dll" size="173552">
+      <assemblyIdentity name="Bunifu.UI.WinForms.BunifuImageButton" version="1.11.5.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>hJkYvvq/ralTUg4Y/hQhFNOYqFGHjBCW5/fPBNH4z/A=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.UI.WinForms.BunifuTextbox.dll" size="127984">
+      <assemblyIdentity name="Bunifu.UI.WinForms.BunifuTextbox" version="1.11.5.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>i4Tp/KwKqoqEy2ogG4e5KVCdg9GYww4UEsT126CXKcM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.UI.WinForms.ToggleSwitch.dll" size="43496">
       <assemblyIdentity name="Bunifu.UI.WinForms.ToggleSwitch" version="1.8.0.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -103,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaHotel.exe" size="485840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaHotel.exe" size="496592">
       <assemblyIdentity name="SistemaHotel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5HOxjbWM9Smq796leiXAhllEDV1LsDFELTs51PxTYUs=</dsig:DigestValue>
+        <dsig:DigestValue>O6GebMm/Tjx/lP1pIy4F+0Djwb7LUKdfyjpg/o4bw10=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

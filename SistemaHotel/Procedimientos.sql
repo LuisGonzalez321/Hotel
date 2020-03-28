@@ -161,6 +161,22 @@ as
 go
 --------------------------------------
 
+
+Create function Determina_Estado (@nohabitacion int, @fechaentrada date, @fechasalida date)
+returns varchar(50)
+as begin
+Declare @estado varchar(50)
+
+if exists (Select * from habitacion_reserva hr where (( @fechaentrada<= hr.fecha_entrada and @fechasalida >=fecha_entrada)
+            or ( @fechaentrada<  hr.fecha_salida) and @fechasalida >hr.fecha_salida) 
+			 and @nohabitacion = hr.no_habitacion )
+			set @estado = 'Reservado'
+			else
+			set @estado = 'Disponible'
+return @estado
+end
+go
+
 Create procedure [dbo].[Estado_Habitacion] @fechaentrada date, @fechasalida date
 as
 Select 
@@ -334,7 +350,7 @@ select
   th.cod_tipo,
   h.descr,
   h.cap,
-  h.stat
+  h.stat,
   th.nom_tipo,
   th.precio 
   from habitacion h
@@ -482,4 +498,12 @@ select
 	stat from Reserva
 go
 
-dbo.Mostrar_Empleado
+
+--Realiza una consulta para ver los clientes a reservar habitacion
+create procedure MostrarClientesReservas
+as
+select 
+	Id_cliente, 
+	(p_nom + ' ' + s_nom + ' ' + p_apell+ ' ' + s_apell) as NombreCompleto,
+	estado from Cliente
+go

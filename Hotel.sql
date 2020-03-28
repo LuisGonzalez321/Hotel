@@ -178,3 +178,4 @@ as
 update Cliente set estado=@habilitar where Id_cliente=@idCliente
 go
 
+select * from cliente

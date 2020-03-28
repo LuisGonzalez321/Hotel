@@ -52,10 +52,10 @@
     <StartupObject>SistemaHotel.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>051FFD2C5BB3FC254325A72CC83E7DB1BB7AE904</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>8D4A70091384F473540994D782CFDE03D773B1FA</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SistemaHotel_ClaveTemporal.pfx</ManifestKeyFile>
+    <ManifestKeyFile>SistemaHotel_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -77,6 +77,15 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=1.11.5.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\Downloads\Bunifu-UI-WinForms-1.11.5.1_ShareAppsCrack.com\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\Bunifu UI WinForms 1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.ToggleSwitch">
       <HintPath>C:\Users\gabriel\Downloads\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.ToggleSwitch.dll</HintPath>
@@ -220,6 +229,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="SistemaHotel_ClaveTemporal.pfx" />
+    <None Include="SistemaHotel_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

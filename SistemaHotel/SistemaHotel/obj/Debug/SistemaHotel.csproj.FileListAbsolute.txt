@@ -102,7 +102,6 @@ C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debu
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.csprojResolveAssemblyReference.cache
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Properties.Resources.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmBuscarReserva.resources
-C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmReserva.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmEmpleado.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmHuesped.resources
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.frmCliente.resources
@@ -120,3 +119,10 @@ C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debu
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.csproj.SistemaHotel.exe.config
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
 C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\obj\Debug\SistemaHotel.Vista.FrmReserva.resources
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\gabriel\UNI\Base_Datos\SISTEMA_HOTEL\SistemaHotel\SistemaHotel\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml

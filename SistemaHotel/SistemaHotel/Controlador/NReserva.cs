@@ -53,5 +53,10 @@ namespace SistemaHotel.Controlador
             return new DReserva().buscaPorCliente(nombre, apellido);
         }
 
+        public static DataTable MostrarReservasCliente (int IdCliente)
+        {
+            return new DReserva().MostrarReservasCliente(IdCliente);
+        }
+
     }
 }

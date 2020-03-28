@@ -13,16 +13,14 @@ namespace SistemaHotel.Modelo
     {
 
         private int id_empleado;
-        private String p_nombre;
-        private String s_nombre;
-        private String p_apellido;
-        private String s_apellido;
-        private String direccion;
-        private String telefono;
-        private String correo;
-        private String estado;
-
-
+        private string p_nombre;
+        private string s_nombre;
+        private string p_apellido;
+        private string s_apellido;
+        private string direccion;
+        private string telefono;
+        private string correo;
+        private string estado;
 
         public string P_nombre
         {
@@ -295,6 +293,10 @@ namespace SistemaHotel.Modelo
             {
                 MessageBox.Show(ex.ToString());
                 DtResultado = null;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return DtResultado;
 

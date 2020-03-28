@@ -78,6 +78,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_reportes
             // 
+            this.btn_reportes.Active = false;
             this.btn_reportes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_reportes.BackColor = System.Drawing.Color.White;
             this.btn_reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -113,6 +114,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_empleado
             // 
+            this.btn_empleado.Active = false;
             this.btn_empleado.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_empleado.BackColor = System.Drawing.Color.White;
             this.btn_empleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -149,6 +151,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_servicio
             // 
+            this.btn_servicio.Active = false;
             this.btn_servicio.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_servicio.BackColor = System.Drawing.Color.White;
             this.btn_servicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -185,6 +188,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_huésped
             // 
+            this.btn_huésped.Active = false;
             this.btn_huésped.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_huésped.BackColor = System.Drawing.Color.White;
             this.btn_huésped.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -221,6 +225,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_reserva
             // 
+            this.btn_reserva.Active = false;
             this.btn_reserva.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_reserva.BackColor = System.Drawing.Color.White;
             this.btn_reserva.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -257,6 +262,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_habitación
             // 
+            this.btn_habitación.Active = false;
             this.btn_habitación.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_habitación.BackColor = System.Drawing.Color.White;
             this.btn_habitación.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -293,6 +299,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_clientes
             // 
+            this.btn_clientes.Active = false;
             this.btn_clientes.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btn_clientes.BackColor = System.Drawing.Color.White;
             this.btn_clientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -342,6 +349,7 @@ namespace SistemaHotel.Vista {
             // 
             // btn_home
             // 
+            this.btn_home.Active = false;
             this.btn_home.Activecolor = System.Drawing.Color.White;
             this.btn_home.BackColor = System.Drawing.Color.White;
             this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

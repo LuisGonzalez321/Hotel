@@ -13,7 +13,7 @@ namespace SistemaHotel {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vista.FrmMenu(0));
+            Application.Run(new Vista.FrmMenu(1));
         }
     }
 }

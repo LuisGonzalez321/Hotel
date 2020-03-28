@@ -36,13 +36,13 @@ namespace SistemaHotel.Vista {
             if (m.Msg == 0x84)
             {
                 Point pos = new Point(m.LParam.ToInt32());
-                pos = this.panel_bottom.PointToClient(pos);
+                pos = this.PointToClient(pos);
                 if (pos.Y<cCaption)
                 {
                     m.Result = (IntPtr) 2;
                     return;
                 }
-                if (pos.X >= this.panel_bottom.ClientSize.Width - cGrip && pos.Y >= this.panel_bottom.ClientSize.Height - cGrip) {
+                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip) {
                     m.Result = (IntPtr) 17;
                     return;
                 }

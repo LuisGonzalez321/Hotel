@@ -222,6 +222,8 @@ go
 
  ----------------------------------------------------------
 
+ select * from Reserva
+
  Create procedure [dbo].[Insertar_Empleado]
  @primernombre varchar(15),
  @segundonombre varchar(15),

@@ -43,19 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.Core.dll" size="2662384">
       <assemblyIdentity name="Bunifu.Core" version="1.11.5.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.Core.dll" size="2661864">
-      <assemblyIdentity name="Bunifu.Core" version="1.8.0.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BnhlSUcHF70HavXKay5INUDS6yC7WlL6FXAxCBGbdoY=</dsig:DigestValue>
+        <dsig:DigestValue>X3JlD206Spt3vN10FZKC/PckvTSvuYnfa24HXqHda8M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Bunifu.UI.WinForms.BunifuButton.dll" size="121328">
+      <assemblyIdentity name="Bunifu.UI.WinForms.BunifuButton" version="1.11.5.1" publicKeyToken="E8E24CCD28363FE9" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>NAdwMNBBTEv6Y8vfmvPm3UJYw7lJM12SkLyT2wudJMw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -96,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaHotel.exe" size="483280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaHotel.exe" size="485840">
       <assemblyIdentity name="SistemaHotel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uOd4BtU2Cd/2zBtMfVfhsklvvV+dwya3i51DHMyf28o=</dsig:DigestValue>
+        <dsig:DigestValue>B2OtV2H2tfSaZVV9avqvtGh6Aj4c2VJ1p+2leCHuxd4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -116,13 +123,13 @@
       <dsig:DigestValue>DWCLBfE8wbYtqfxp+mD6nDORTSaa6jih+bPwX/zELRM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SistemaHotel.exe.config" size="1059">
+  <file name="SistemaHotel.exe.config" size="1299">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>uTQlQBBJadm7Uhf9NWJ0rm4EOKfL33FI3t2K4vnlmT0=</dsig:DigestValue>
+      <dsig:DigestValue>2NM9+iI0fuur/o7CNsQwQ6eaOjTZf2Ap9YsrnXVLfDE=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

@@ -51,21 +51,6 @@ namespace SistemaHotel.Vista
             this.InitializeComponent();
         }
 
-        private void btn_buscar_Click (object sender, EventArgs e)
-        {
-            DateTime fechaEntrada = this.date_fechaEntrada.Value;
-            DateTime fechaSalida = this.date_FechaSalida.Value;
-            if (switch_habilitar.Value == false)
-            {
-                int id = Convert.ToInt32(combox_idHab.selectedValue);
-                tabla_habitación.DataSource = Controlador.NHabitación.Disponibilidad_Habitación(id, fechaEntrada, fechaSalida);
-            }
-            else
-            {
-                tabla_habitación.DataSource = Controlador.NHabitación.Estado_Habitacion(fechaEntrada, fechaSalida);
-            }
-        }
-
         private void switch_habilitar_Click (object sender, EventArgs e)
         {
             if (switch_habilitar.Value == true)
@@ -82,5 +67,20 @@ namespace SistemaHotel.Vista
         {
             FrmCliente frmcliente = new FrmCliente(Convert.ToInt32(combox_idHab.selectedValue), id_empleado, this.date_fechaEntrada.Value, this.date_FechaSalida.Value);
         }
+
+        private void btn_buscar_Click (object sender, EventArgs e)
+        {
+            DateTime fechaEntrada = this.date_fechaEntrada.Value;
+            DateTime fechaSalida = this.date_FechaSalida.Value;
+            if (switch_habilitar.Value == false)
+            {
+                int id = Convert.ToInt32(combox_idHab.selectedValue);
+                tabla_habitación.DataSource = Controlador.NHabitación.Disponibilidad_Habitación(id, fechaEntrada, fechaSalida);
+            }
+            else
+            {
+                tabla_habitación.DataSource = Controlador.NHabitación.Estado_Habitacion(fechaEntrada, fechaSalida);
+            }
+         }
     }
 }

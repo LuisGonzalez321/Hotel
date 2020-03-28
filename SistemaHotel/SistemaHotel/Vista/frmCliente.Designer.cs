@@ -24,6 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txt_PrimerNombre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_PrimerApellido = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txt_Correo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -245,7 +250,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(19, 302);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(19, 260);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(86, 25);
             this.bunifuCustomLabel1.TabIndex = 12;
@@ -258,7 +263,7 @@
             this.bunifuSeparator1.LineThickness = 1;
             this.bunifuSeparator1.Location = new System.Drawing.Point(306, 54);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(44, 297);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(44, 259);
             this.bunifuSeparator1.TabIndex = 14;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = true;
@@ -281,9 +286,10 @@
             this.panel1.Controls.Add(this.txt_Correo);
             this.panel1.Controls.Add(this.txt_PrimerApellido);
             this.panel1.Controls.Add(this.txt_PrimerNombre);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(811, 340);
+            this.panel1.Size = new System.Drawing.Size(789, 583);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -303,9 +309,9 @@
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(14, 38);
+            this.bunifuSeparator2.Location = new System.Drawing.Point(24, 38);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(778, 10);
+            this.bunifuSeparator2.Size = new System.Drawing.Size(716, 10);
             this.bunifuSeparator2.TabIndex = 62;
             this.bunifuSeparator2.Transparency = 255;
             this.bunifuSeparator2.Vertical = false;
@@ -316,7 +322,7 @@
             this.switch_habilitar.BorderRadius = 0;
             this.switch_habilitar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switch_habilitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.switch_habilitar.Location = new System.Drawing.Point(121, 308);
+            this.switch_habilitar.Location = new System.Drawing.Point(132, 266);
             this.switch_habilitar.Name = "switch_habilitar";
             this.switch_habilitar.Oncolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.switch_habilitar.Onoffcolor = System.Drawing.Color.DarkGray;
@@ -348,7 +354,7 @@
             this.btn_Cancelar.IconVisible = true;
             this.btn_Cancelar.IconZoom = 90D;
             this.btn_Cancelar.IsTab = false;
-            this.btn_Cancelar.Location = new System.Drawing.Point(14, 246);
+            this.btn_Cancelar.Location = new System.Drawing.Point(24, 203);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Cancelar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
@@ -384,7 +390,7 @@
             this.btn_guardar.IconVisible = true;
             this.btn_guardar.IconZoom = 90D;
             this.btn_guardar.IsTab = false;
-            this.btn_guardar.Location = new System.Drawing.Point(14, 198);
+            this.btn_guardar.Location = new System.Drawing.Point(24, 155);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
@@ -420,7 +426,7 @@
             this.btn_Editar.IconVisible = true;
             this.btn_Editar.IconZoom = 90D;
             this.btn_Editar.IsTab = false;
-            this.btn_Editar.Location = new System.Drawing.Point(14, 150);
+            this.btn_Editar.Location = new System.Drawing.Point(24, 107);
             this.btn_Editar.Name = "btn_Editar";
             this.btn_Editar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Editar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
@@ -456,7 +462,7 @@
             this.btn_Nuevo.IconVisible = true;
             this.btn_Nuevo.IconZoom = 90D;
             this.btn_Nuevo.IsTab = false;
-            this.btn_Nuevo.Location = new System.Drawing.Point(14, 102);
+            this.btn_Nuevo.Location = new System.Drawing.Point(24, 59);
             this.btn_Nuevo.Name = "btn_Nuevo";
             this.btn_Nuevo.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Nuevo.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(0)))), ((int)(((byte)(15)))));
@@ -472,10 +478,59 @@
             // 
             // tabla_cliente
             // 
-            this.tabla_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabla_cliente.Location = new System.Drawing.Point(17, 390);
+            this.tabla_cliente.AllowUserToAddRows = false;
+            this.tabla_cliente.AllowUserToDeleteRows = false;
+            this.tabla_cliente.AllowUserToResizeColumns = false;
+            this.tabla_cliente.AllowUserToResizeRows = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.tabla_cliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.tabla_cliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.tabla_cliente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.tabla_cliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(3)))), ((int)(((byte)(61)))));
+            this.tabla_cliente.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabla_cliente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.tabla_cliente.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.tabla_cliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.tabla_cliente.ColumnHeadersHeight = 40;
+            this.tabla_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(0, 10, 0, 10);
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabla_cliente.DefaultCellStyle = dataGridViewCellStyle13;
+            this.tabla_cliente.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabla_cliente.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
+            this.tabla_cliente.Location = new System.Drawing.Point(0, 326);
+            this.tabla_cliente.Margin = new System.Windows.Forms.Padding(10);
             this.tabla_cliente.Name = "tabla_cliente";
-            this.tabla_cliente.Size = new System.Drawing.Size(240, 150);
+            this.tabla_cliente.ReadOnly = true;
+            this.tabla_cliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Purple;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabla_cliente.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.tabla_cliente.RowHeadersVisible = false;
+            this.tabla_cliente.RowHeadersWidth = 10;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            this.tabla_cliente.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.tabla_cliente.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.tabla_cliente.RowTemplate.Height = 30;
+            this.tabla_cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabla_cliente.Size = new System.Drawing.Size(789, 257);
             this.tabla_cliente.TabIndex = 1;
             // 
             // FrmCliente
@@ -486,7 +541,7 @@
             this.Controls.Add(this.tabla_cliente);
             this.Controls.Add(this.panel1);
             this.Name = "FrmCliente";
-            this.Size = new System.Drawing.Size(817, 578);
+            this.Size = new System.Drawing.Size(789, 583);
             this.Load += new System.EventHandler(this.UserControl1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -514,5 +569,14 @@
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.DataGridView tabla_cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primerNombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoNombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direcciónDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teléfonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
     }
 }

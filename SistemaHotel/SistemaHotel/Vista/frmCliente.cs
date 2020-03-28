@@ -146,8 +146,21 @@ namespace SistemaHotel.Vista {
         private void tabla_cliente_CellDoubleClick (object sender, DataGridViewCellEventArgs e)
         {
             HabilitaBotones(false, true);
-            MessageBox.Show("aglo");
             AgregarDatosDeTabla();
+        }
+
+        private void tabla_cliente_CellClick (object sender, DataGridViewCellEventArgs e)
+        {
+            IdCliente = Convert.ToInt32(this.tabla_cliente.CurrentRow.Cells ["Id_cliente"].Value);
+            string estado = Convert.ToString(this.tabla_cliente.CurrentRow.Cells ["estado"].Value);
+            if (estado == "HABILITADO")
+            {
+                this.switch_habilitar.Value = true;
+            }
+            else if (estado == "DESHABILITADO")
+            {
+                this.switch_habilitar.Value = false;
+            }
         }
 
 
@@ -354,6 +367,7 @@ namespace SistemaHotel.Vista {
         {
             //this.tabla_cliente.DataSource = NCliente.BuscarAsegurado(txt_Buscar.Text.Trim());
         }
+
 
     }
 }

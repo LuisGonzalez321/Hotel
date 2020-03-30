@@ -65,7 +65,7 @@ namespace SistemaHotel.Modelo
             get;set;
         }
 
-        public  bool insertarReserva(int idCliente, int idEmpleado, String formaPago, String divisa, String estado)
+        public  bool insertarReserva(int idCliente, int idEmpleado, string formaPago, string divisa, string estado)
         {
 
             bool insercionSatifactoria = true;
@@ -128,10 +128,12 @@ namespace SistemaHotel.Modelo
 
         }
 
-        public bool Insertar_habitaciónReserva(int no_habitación,int id_reserva,DateTime fecha_entrada,DateTime fecha_salida)
+        public int Insertar_habitaciónReserva(int no_habitación,int id_reserva,DateTime fecha_entrada,DateTime fecha_salida)
         {
-            bool insercionSatifactoria = true;
+            int Id_hab_reserva = 0;
+            DataRow dr = null;
             SqlConnection SqlCon = new SqlConnection();
+            DataTable DtResultado = new DataTable();
             try
             {
                 SqlCon.ConnectionString = Conexión.Cn;
@@ -168,18 +170,23 @@ namespace SistemaHotel.Modelo
                 fechasalida.Value = fecha_salida;
                 SqlCmd.Parameters.Add(fechasalida);
 
-                SqlCmd.ExecuteNonQuery();
+                //<>
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+                int cantidad = DtResultado.Rows.Count;
+                dr = DtResultado.Rows [0];
+                Id_hab_reserva = (cantidad > 0 ) ? Convert.ToInt32(dr ["Id_hab_reserva"].ToString()) : 0;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                insercionSatifactoria = false;
+                Id_hab_reserva = 0;
             }
             finally
             {
                 if (SqlCon.State ==  ConnectionState.Open) SqlCon.Close();
             }
-            return insercionSatifactoria;
+            return Id_hab_reserva;
         }
 
         public int get_idReserva()
@@ -212,31 +219,29 @@ namespace SistemaHotel.Modelo
         }
 
 
-        public DataTable Mostrar_Huesped_Reservado(int idReserva)
+        public List<string> Mostrar_Huesped_Reservado (int idReserva)
         {
             DataTable DtResultado = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
+            List<string> lista_huesped = new List<string>();
             try
             {
 
                 SqlCon.ConnectionString = Conexión.Cn;
-                SqlCommand SqlCmd = new SqlCommand();
-                SqlCmd.Connection = SqlCon;
-                SqlCmd.CommandText = "Mostrar_Huesped_Reservado";
-                SqlCmd.CommandType = CommandType.StoredProcedure;
-
-                SqlCmd.Parameters.Add(new SqlParameter("@IdReserva",idReserva));
-
-                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
-                SqlDat.Fill(DtResultado);
+                new SqlDataAdapter(new SqlCommand("Mostrar_Huesped_Reservado " + idReserva, SqlCon)).Fill(DtResultado);
+                for (int i = 0 ;i < DtResultado.Rows.Count ;i++)
+                {
+                    lista_huesped.Add(DtResultado.Rows [i] ["Nombre"].ToString());
+                }
+                return lista_huesped;
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-                DtResultado = null;
+                lista_huesped = null;
             }
-            return DtResultado;
+            return lista_huesped;
         }
 
         public  DataTable Busca_Reserva_Por_Fecha_Reserva(DateTime date)

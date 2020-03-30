@@ -254,7 +254,7 @@ go
 
  ------------------------------------------------------------
 
-Create procedure [dbo].[Insertar_habitaciónReserva]
+create procedure [dbo].[Insertar_habitaciónReserva]
 @no_habitación int,
 @id_reserva int,
 @fecha_entrada date,
@@ -266,6 +266,10 @@ declare @precio money= (select precio
 					where h.no_habitacion=@no_habitación)
 Insert into habitacion_reserva values (@no_habitación,@id_reserva,@fecha_entrada,@fecha_entrada,@precio)
 
+-----------------------------
+select top(1) Id_hab_reserva 
+from habitacion_reserva hr 
+order by Id_hab_reserva desc
 go
 -------------------------
 Create procedure Insertar_Huesped
@@ -282,11 +286,8 @@ Insert into huesped values (@PrimerNombre,@SegundoNombre,@PrimerApellido,@Segund
 
 declare @idHuesped int = (select top(1) id_huesped from huesped order by id_huesped desc)
 
-declare @id_Reserva int = (select top(1) id_reserva from reserva order by id_reserva desc)
 
-declare @id_hab_reserva int= (select top(1)id_hab_reserva from habitacion_reserva where id_reserva=@id_Reserva)
 
-Insert into huesped_hab_reserva values(@idHuesped,@id_hab_reserva)
 go
 
 ----------------------------------------------------------
@@ -331,9 +332,6 @@ Select
 
  ------------------------------------------------------------
 
- select * from Cliente
-
-
 Create procedure [dbo].[Mostrar_Empleado]
 as
 select * from empleado
@@ -342,7 +340,7 @@ go
 ------------------------------------------------------------
 
 
-Create procedure [dbo].[Mostrar_Habitación]  11
+Create procedure [dbo].[Mostrar_Habitación]
 @IdTipoHabitación int
    as
 select 
@@ -465,26 +463,8 @@ as
 select descr from servicio
 go
 
-execute dbo.Mostrar_Huesped_Reservado 2
+execute dbo.Mostrar_Huesped_Reservado 3
 
-select * from cargos_servicios
-select * from cliente
-select * from empleado
-select * from habitacion
-select * from habitacion_reserva
-
-select * from Empleado
-select * from Usuario
-
-insert into Usuario values('Luis','1234','Admin',1)
-
-update Usuario set rol = 'Administrador' where IdUsuario = 1
-
-execute Mostrar_Huesped_Reservado 1
-
-
-select * from Reserva
-go
 
 
 create procedure MostrarReservas
@@ -507,3 +487,7 @@ select
 	(p_nom + ' ' + s_nom + ' ' + p_apell+ ' ' + s_apell) as NombreCompleto,
 	estado from Cliente
 go
+
+
+
+select * from Habitacion_Reserva

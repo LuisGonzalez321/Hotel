@@ -16,11 +16,6 @@ namespace SistemaHotel.Vista
         int id_empleado;
         public FrmMenu padre;
 
-        public FrmMenu Padre
-        {
-            get;set;
-        }
-
         public FrmHabitación (int id_empleado)
         {
             InitializeComponent();
@@ -71,8 +66,11 @@ namespace SistemaHotel.Vista
 
         private void btn_reservar_Click (object sender, EventArgs e)
         {
+            int no_habitacion = Convert.ToInt32(combox_idHab.selectedValue);
+            padre.no_habitacion = no_habitacion;
+            padre.FechaEntrada = date_fechaEntrada.Value;
+            padre.FechaSalida = date_FechaSalida.Value;
             padre.btn_reservas_Click(sender, e);
-            //int no_habitacion = int.Parse( combox_hab.selectedValue );
         }
 
         private void btn_buscar_Click (object sender, EventArgs e)

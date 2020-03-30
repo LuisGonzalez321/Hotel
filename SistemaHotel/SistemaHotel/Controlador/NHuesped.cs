@@ -22,9 +22,9 @@ namespace SistemaHotel.Controlador
             return new DHuesped().MáximoHuespedPorHabitación(id);
         }
 
-        public static bool Insertar_Huesped(string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string nacionalidad ,string correo)
+        public static bool Insertar_Huesped(string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string nacionalidad ,string correo, int IdHabReserva)
         {
-            return new DHuesped().Insertar_Huesped(p_nombre,s_nombre,p_apellido,s_apellido,direccion,telefono,nacionalidad,correo);
+            return new DHuesped().Insertar_Huesped(p_nombre, s_nombre, p_apellido, s_apellido, direccion, telefono, nacionalidad, correo, IdHabReserva);
         }
     }
 }

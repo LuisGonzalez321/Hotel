@@ -139,14 +139,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaHotel.exe" size="496592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaHotel.exe" size="512464">
       <assemblyIdentity name="SistemaHotel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O6GebMm/Tjx/lP1pIy4F+0Djwb7LUKdfyjpg/o4bw10=</dsig:DigestValue>
+        <dsig:DigestValue>zI+qUqEAsrQsA+uzpecqea6zjcs0DYLFNYV25X6Ucg4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

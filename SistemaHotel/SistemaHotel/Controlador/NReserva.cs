@@ -21,7 +21,7 @@ namespace SistemaHotel.Controlador
           return new DReserva().insertarReserva(idCliente,idEmpleado,formaPago,divisa,estado);
         }
 
-        public static bool Insertar_habitaciónReserva(int no_habitación, int id_reserva, DateTime fecha_entrada, DateTime fecha_salida)
+        public static int Insertar_habitaciónReserva(int no_habitación, int id_reserva, DateTime fecha_entrada, DateTime fecha_salida)
         {
             return new DReserva().Insertar_habitaciónReserva(no_habitación,id_reserva,fecha_entrada,fecha_salida);
         }
@@ -31,7 +31,7 @@ namespace SistemaHotel.Controlador
             return new DReserva().get_idReserva();
         }
 
-        public static DataTable Mostrar_Huesped_Reservado(int idReserva)
+        public static List<string> Mostrar_Huesped_Reservado (int idReserva)
         {
             return new DReserva().Mostrar_Huesped_Reservado(idReserva);
         }

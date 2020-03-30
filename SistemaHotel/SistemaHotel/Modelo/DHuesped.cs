@@ -197,7 +197,7 @@ namespace SistemaHotel.Modelo
 
         }
 
-        public bool Insertar_Huesped(string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string nacionalidad, string correo)
+        public bool Insertar_Huesped(string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string nacionalidad, string correo, int IdHabitacionReserva)
         {
             bool state;
             SqlConnection SqlCon = new SqlConnection();
@@ -270,6 +270,11 @@ namespace SistemaHotel.Modelo
                 ParCorreo.Value = correo;
                 SqlCmd.Parameters.Add(ParCorreo);
 
+                SqlParameter ParHabReserva = new SqlParameter();
+                ParHabReserva.ParameterName = "@Idhabitacion_reserva";
+                ParHabReserva.SqlDbType = SqlDbType.Int;
+                ParHabReserva.Value = IdHabitacionReserva;
+                SqlCmd.Parameters.Add(ParHabReserva);
 
                 //Ejecutamos nuestro comando
                 SqlCmd.ExecuteNonQuery();// == 1 ? "OK" : "NO se Ingreso el Registro";

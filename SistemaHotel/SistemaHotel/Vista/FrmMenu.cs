@@ -15,7 +15,9 @@ namespace SistemaHotel.Vista {
     {
 
         public int IdEmpleado;
-        public DateTime FechEntrada;
+        public int no_habitacion;
+        public int Idhabitacion_reserva;
+        public DateTime FechaEntrada;
         public DateTime FechaSalida;
 
         public FrmMenu (int IdEmpleado)
@@ -87,7 +89,8 @@ namespace SistemaHotel.Vista {
         public void btn_reservas_Click (object sender, EventArgs e)
         {
             panel_bottom.Controls.Clear();
-            FrmReserva reserva = new FrmReserva(IdEmpleado);
+            FrmReserva reserva = new FrmReserva(IdEmpleado, no_habitacion, FechaEntrada, FechaSalida);
+            reserva.padre = this;
             reserva.Dock = DockStyle.Fill;
             panel_bottom.Controls.Add(reserva);
         }
@@ -106,10 +109,10 @@ namespace SistemaHotel.Vista {
             panel_bottom.Controls.Add(habitacion);
         }
 
-        private void btn_huesped_Click (object sender, EventArgs e)
+        public void btn_huesped_Click (object sender, EventArgs e)
         {
             panel_bottom.Controls.Clear();
-            FrmHuesped huesped = new FrmHuesped();
+            FrmHuesped huesped = new FrmHuesped(Idhabitacion_reserva);
             huesped.Dock = DockStyle.Fill;
             panel_bottom.Controls.Add(huesped);
         }

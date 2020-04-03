@@ -107,6 +107,13 @@ namespace SistemaHotel.Modelo {
                 SqlCon.ConnectionString = Conexión.Cn;
                 SqlCommand SqlCmd = new SqlCommand("Validar_Acceso '" + usuario + "', '" + contraseña + "'", SqlCon);
 
+                //SqlParameter ParUsuario = new SqlParameter();
+                //ParUsuario.ParameterName = "@primernombre";
+                //ParUsuario.SqlDbType = SqlDbType.VarChar;
+                //ParUsuario.Size = 60;
+                //ParUsuario.Value = usuario;
+                //SqlCmd.Parameters.Add(ParUsuario);
+
                 SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
                 SqlDat.Fill(DtResultado);
 

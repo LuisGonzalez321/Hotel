@@ -61,6 +61,7 @@
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.Active = false;
             this.btn_Cancelar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -95,6 +96,7 @@
             // 
             // btn_guardar
             // 
+            this.btn_guardar.Active = false;
             this.btn_guardar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -129,6 +131,7 @@
             // 
             // btn_Editar
             // 
+            this.btn_Editar.Active = false;
             this.btn_Editar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Editar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -137,7 +140,7 @@
             this.btn_Editar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Editar.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Editar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Editar.Iconimage = global::SistemaHotel.Properties.Resources.user_1;
+            this.btn_Editar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Editar.Iconimage")));
             this.btn_Editar.Iconimage_right = null;
             this.btn_Editar.Iconimage_right_Selected = null;
             this.btn_Editar.Iconimage_Selected = null;
@@ -146,7 +149,7 @@
             this.btn_Editar.IconRightVisible = true;
             this.btn_Editar.IconRightZoom = 0D;
             this.btn_Editar.IconVisible = true;
-            this.btn_Editar.IconZoom = 90D;
+            this.btn_Editar.IconZoom = 60D;
             this.btn_Editar.IsTab = false;
             this.btn_Editar.Location = new System.Drawing.Point(16, 141);
             this.btn_Editar.Name = "btn_Editar";
@@ -163,6 +166,7 @@
             // 
             // btn_Nuevo
             // 
+            this.btn_Nuevo.Active = false;
             this.btn_Nuevo.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Nuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_Nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -197,6 +201,9 @@
             // 
             // txt_Teléfono
             // 
+            this.txt_Teléfono.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Teléfono.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Teléfono.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Teléfono.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Teléfono.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Teléfono.ForeColor = System.Drawing.Color.White;
@@ -209,6 +216,7 @@
             this.txt_Teléfono.LineThickness = 3;
             this.txt_Teléfono.Location = new System.Drawing.Point(410, 264);
             this.txt_Teléfono.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Teléfono.MaxLength = 32767;
             this.txt_Teléfono.Name = "txt_Teléfono";
             this.txt_Teléfono.Size = new System.Drawing.Size(328, 33);
             this.txt_Teléfono.TabIndex = 36;
@@ -217,6 +225,9 @@
             // 
             // txt_SegundoApellido
             // 
+            this.txt_SegundoApellido.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_SegundoApellido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_SegundoApellido.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_SegundoApellido.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_SegundoApellido.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_SegundoApellido.ForeColor = System.Drawing.Color.White;
@@ -229,6 +240,7 @@
             this.txt_SegundoApellido.LineThickness = 3;
             this.txt_SegundoApellido.Location = new System.Drawing.Point(576, 93);
             this.txt_SegundoApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SegundoApellido.MaxLength = 32767;
             this.txt_SegundoApellido.Name = "txt_SegundoApellido";
             this.txt_SegundoApellido.Size = new System.Drawing.Size(162, 33);
             this.txt_SegundoApellido.TabIndex = 35;
@@ -237,6 +249,9 @@
             // 
             // txt_Dirección
             // 
+            this.txt_Dirección.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Dirección.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Dirección.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Dirección.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Dirección.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Dirección.ForeColor = System.Drawing.Color.White;
@@ -249,6 +264,7 @@
             this.txt_Dirección.LineThickness = 3;
             this.txt_Dirección.Location = new System.Drawing.Point(410, 150);
             this.txt_Dirección.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Dirección.MaxLength = 32767;
             this.txt_Dirección.Name = "txt_Dirección";
             this.txt_Dirección.Size = new System.Drawing.Size(328, 33);
             this.txt_Dirección.TabIndex = 34;
@@ -258,6 +274,9 @@
             // 
             // txt_SegundoNombre
             // 
+            this.txt_SegundoNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_SegundoNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_SegundoNombre.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_SegundoNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_SegundoNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_SegundoNombre.ForeColor = System.Drawing.Color.White;
@@ -270,6 +289,7 @@
             this.txt_SegundoNombre.LineThickness = 3;
             this.txt_SegundoNombre.Location = new System.Drawing.Point(576, 34);
             this.txt_SegundoNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SegundoNombre.MaxLength = 32767;
             this.txt_SegundoNombre.Name = "txt_SegundoNombre";
             this.txt_SegundoNombre.Size = new System.Drawing.Size(162, 33);
             this.txt_SegundoNombre.TabIndex = 33;
@@ -278,6 +298,9 @@
             // 
             // txt_Correo
             // 
+            this.txt_Correo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_Correo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_Correo.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_Correo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Correo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Correo.ForeColor = System.Drawing.Color.White;
@@ -290,6 +313,7 @@
             this.txt_Correo.LineThickness = 3;
             this.txt_Correo.Location = new System.Drawing.Point(410, 207);
             this.txt_Correo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Correo.MaxLength = 32767;
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(328, 33);
             this.txt_Correo.TabIndex = 32;
@@ -298,6 +322,9 @@
             // 
             // txt_PrimerApellido
             // 
+            this.txt_PrimerApellido.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_PrimerApellido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_PrimerApellido.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_PrimerApellido.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_PrimerApellido.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_PrimerApellido.ForeColor = System.Drawing.Color.White;
@@ -310,6 +337,7 @@
             this.txt_PrimerApellido.LineThickness = 3;
             this.txt_PrimerApellido.Location = new System.Drawing.Point(410, 93);
             this.txt_PrimerApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_PrimerApellido.MaxLength = 32767;
             this.txt_PrimerApellido.Name = "txt_PrimerApellido";
             this.txt_PrimerApellido.Size = new System.Drawing.Size(158, 33);
             this.txt_PrimerApellido.TabIndex = 31;
@@ -318,6 +346,9 @@
             // 
             // txt_PrimerNombre
             // 
+            this.txt_PrimerNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_PrimerNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_PrimerNombre.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_PrimerNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_PrimerNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_PrimerNombre.ForeColor = System.Drawing.Color.White;
@@ -330,6 +361,7 @@
             this.txt_PrimerNombre.LineThickness = 3;
             this.txt_PrimerNombre.Location = new System.Drawing.Point(410, 34);
             this.txt_PrimerNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_PrimerNombre.MaxLength = 32767;
             this.txt_PrimerNombre.Name = "txt_PrimerNombre";
             this.txt_PrimerNombre.Size = new System.Drawing.Size(158, 33);
             this.txt_PrimerNombre.TabIndex = 30;

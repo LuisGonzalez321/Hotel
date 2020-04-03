@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Título = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btn_cerrar = new Bunifu.Framework.UI.BunifuImageButton();
@@ -56,7 +57,10 @@
             // 
             // Título
             // 
+            this.Título.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Título.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.Título.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(3)))), ((int)(((byte)(61)))));
+            this.Título.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.Título.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Título.Enabled = false;
             this.Título.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -70,6 +74,7 @@
             this.Título.LineThickness = 4;
             this.Título.Location = new System.Drawing.Point(54, 45);
             this.Título.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Título.MaxLength = 32767;
             this.Título.Name = "Título";
             this.Título.Size = new System.Drawing.Size(255, 38);
             this.Título.TabIndex = 1;
@@ -79,11 +84,11 @@
             // btn_cerrar
             // 
             this.btn_cerrar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cerrar.Image = global::SistemaHotel.Properties.Resources.shield;
+            this.btn_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cerrar.Image")));
             this.btn_cerrar.ImageActive = null;
-            this.btn_cerrar.Location = new System.Drawing.Point(321, 0);
+            this.btn_cerrar.Location = new System.Drawing.Point(332, 0);
             this.btn_cerrar.Name = "btn_cerrar";
-            this.btn_cerrar.Size = new System.Drawing.Size(41, 43);
+            this.btn_cerrar.Size = new System.Drawing.Size(30, 33);
             this.btn_cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_cerrar.TabIndex = 2;
             this.btn_cerrar.TabStop = false;
@@ -92,6 +97,7 @@
             // 
             // btn_ingresar
             // 
+            this.btn_ingresar.Active = false;
             this.btn_ingresar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_ingresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(45)))), ((int)(((byte)(145)))));
             this.btn_ingresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -131,7 +137,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SistemaHotel.Properties.Resources.user_3__2_;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(33, 168);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(43, 44);
@@ -142,7 +148,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::SistemaHotel.Properties.Resources.padlock;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(33, 248);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(43, 44);
@@ -152,7 +158,10 @@
             // 
             // txt_pass
             // 
+            this.txt_pass.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_pass.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_pass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(3)))), ((int)(((byte)(61)))));
+            this.txt_pass.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_pass.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_pass.ForeColor = System.Drawing.Color.White;
@@ -165,6 +174,7 @@
             this.txt_pass.LineThickness = 3;
             this.txt_pass.Location = new System.Drawing.Point(74, 248);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_pass.MaxLength = 32767;
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(254, 44);
             this.txt_pass.TabIndex = 6;
@@ -176,7 +186,10 @@
             // 
             // txt_user
             // 
+            this.txt_user.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_user.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txt_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(3)))), ((int)(((byte)(61)))));
+            this.txt_user.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_user.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_user.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_user.ForeColor = System.Drawing.Color.White;
@@ -189,6 +202,7 @@
             this.txt_user.LineThickness = 3;
             this.txt_user.Location = new System.Drawing.Point(74, 168);
             this.txt_user.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_user.MaxLength = 32767;
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(254, 44);
             this.txt_user.TabIndex = 7;

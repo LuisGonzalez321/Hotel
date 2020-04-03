@@ -63,14 +63,14 @@ namespace SistemaHotel.Modelo
         public DEmpleado(int id_empleado, string p_nombre, string s_nombre, string p_apellido, string s_apellido, string direccion, string telefono, string correo, string estado)
         {
             this.id_empleado = id_empleado;
-            this.P_nombre = p_nombre;
-            this.S_nombre = s_nombre;
-            this.P_apellido = p_apellido;
-            this.S_apellido = s_apellido;
-            this.Direccion = direccion;
+            this.p_nombre = p_nombre;
+            this.s_nombre = s_nombre;
+            this.p_apellido = p_apellido;
+            this.s_apellido = s_apellido;
+            this.direccion = direccion;
             this.telefono = telefono;
-            this.Correo = correo;
-            this.Estado = estado;
+            this.correo = correo;
+            this.estado = estado;
         }
 
         public DEmpleado() { }

@@ -118,53 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="shield" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\IE\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-información-del-hotel-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Favorites\icons8-información-del-hotel-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Fondo_Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\Fondo_Menu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\IE\user-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-key-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Favorites\icons8-key-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="padlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\IE\padlock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-grupos-de-usuarios-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\IE\icons8-grupos-de-usuarios-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-bookmark-501" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Favorites\icons8-bookmark-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="habitació_Ejecutiva" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\habitació_Ejecutiva.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-bookmark-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Favorites\icons8-bookmark-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="habitación_básica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\habitación_básica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-contacts-50 - copia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Favorites\icons8-contacts-50 - copia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-support-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Favorites\icons8-support-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="habitación_presidencial" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\habitación_presidencial.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shield1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\IE\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="user-3 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\IE\user-3 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="habitación_básica1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\habitación_básica.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -678,15 +678,6 @@
 
         #endregion
         private System.Windows.Forms.DataGridView tabla_cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idClienteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn primerNombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn segundoNombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direcciónDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn teléfonoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator2;
         private Bunifu.Framework.UI.BunifuSwitch switch_habilitar;
